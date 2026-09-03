@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Complete your CVexta.com resume payment securely.">
+
+    <title>Payment | CVexta.com</title>
+
+    <link rel="stylesheet"
+          href="payment.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="logo">
+
+        <a href="index.html">
+            CVexta.com
+        </a>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="terms.html">
+            Terms & Conditions
+        </a>
+
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="payment-hero">
+
+    <span class="step-label">
+        STEP 2 OF 3
+    </span>
+
+    <h1>
+        Complete Your Payment
+    </h1>
+
+    <p>
+        Your resume details have been saved.
+        Complete the payment below to continue.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROGRESS
+===================================================== -->
+
+<div class="progress-container">
+
+    <div class="progress-step completed">
+
+        <span>✓</span>
+
+        Details
+
+    </div>
+
+
+    <div class="progress-line active-line"></div>
+
+
+    <div class="progress-step active">
+
+        <span>2</span>
+
+        Payment
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step">
+
+        <span>3</span>
+
+        WhatsApp
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN PAYMENT AREA
+===================================================== -->
+
+<main class="payment-wrapper">
+
+
+    <!-- =================================================
+         ORDER SUMMARY
+    ================================================== -->
+
+    <section class="order-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="small-label">
+                    YOUR ORDER
+                </span>
+
+                <h2 id="resumeName">
+                    Professional Resume
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="order-details">
+
+            <div class="order-row">
+
+                <span>
+                    Resume Type
+                </span>
+
+                <strong id="resumeType">
+                    Professional Resume
+                </strong>
+
+            </div>
+
+
+            <div class="order-row">
+
+                <span>
+                    Applicant
+                </span>
+
+                <strong id="customerName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="order-row total-row">
+
+                <span>
+                    Amount Payable
+                </span>
+
+                <strong id="amount">
+                    ₹499
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PAYMENT CARD
+    ================================================== -->
+
+    <section class="payment-card">
+
+
+        <div class="payment-card-header">
+
+            <span class="small-label">
+                SECURE PAYMENT
+            </span>
+
+            <h2>
+                Pay using UPI
+            </h2>
+
+            <p>
+                Scan the QR code or click the button below
+                to open your UPI app.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QR CODE
+        ================================================== -->
+
+        <div class="qr-section">
+
+            <div class="qr-box">
+
+                <img
+                    id="upiQr"
+                    src=""
+                    alt="UPI Payment QR Code">
+
+            </div>
+
+
+            <p class="scan-text">
+
+                Scan this QR code using
+                Google Pay, PhonePe, Paytm or your bank's
+                UPI app.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="or-divider">
+
+            <span>
+                OR
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAY BY UPI BUTTON
+        ================================================== -->
+
+        <button
+            type="button"
+            id="payUpiButton"
+            class="upi-button">
+
+            <span class="upi-icon">
+                ₹
+            </span>
+
+            Pay ₹499 by UPI
+
+        </button>
+
+
+
+        <p class="upi-note">
+
+            Clicking this button will open a UPI payment
+            application installed on your phone.
+
+        </p>
+
+
+
+        <!-- =================================================
+             PAYMENT INSTRUCTIONS
+        ================================================== -->
+
+        <div class="instructions">
+
+            <h3>
+                How to pay
+            </h3>
+
+            <div class="instruction">
+
+                <span>1</span>
+
+                <p>
+                    Scan the QR code or click
+                    <strong>Pay by UPI</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="instruction">
+
+                <span>2</span>
+
+                <p>
+                    Check the payment amount and
+                    payee name in your UPI app.
+                </p>
+
+            </div>
+
+
+            <div class="instruction">
+
+                <span>3</span>
+
+                <p>
+                    Complete the payment using your
+                    UPI PIN.
+                </p>
+
+            </div>
+
+
+            <div class="instruction">
+
+                <span>4</span>
+
+                <p>
+                    Return to this page and click
+                    <strong>Payment Completed</strong>.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAYMENT COMPLETED
+        ================================================== -->
+
+        <div class="payment-confirmation">
+
+            <button
+                type="button"
+                id="paymentCompleted"
+                class="completed-button">
+
+                ✓ Payment Completed — Continue
+
+            </button>
+
+
+            <p>
+                Only click this button after you have
+                successfully completed the UPI payment.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECURITY NOTE
+    ================================================== -->
+
+    <section class="security-box">
+
+        <div class="security-icon">
+            🔒
+        </div>
+
+        <div>
+
+            <h3>
+                Secure Payment
+            </h3>
+
+            <p>
+                Your payment is processed through your
+                selected UPI application. CVexta.com does
+                not ask for your UPI PIN, OTP or banking
+                password.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                CVexta.com
+            </h2>
+
+            <p>
+                Building better resumes today.
+                Building better careers tomorrow.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="terms.html">
+                Terms & Conditions
+            </a>
+
+            <a href="Privacy7Policy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CVexta.com. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   YOUR UPI DETAILS
+===================================================== */
+
+
+/*
+   IMPORTANT:
+
+   Replace this with your REAL UPI ID.
+
+   Example:
+
+   const UPI_ID = "yourname@oksbi";
+
+   Do NOT put your UPI phone number here unless your
+   UPI app actually uses that as your VPA.
+*/
+
+const UPI_ID = "jagjit.js301@okicici";
+
+
+const BUSINESS_NAME = "CVexta.com";
+
+
+/*
+   WhatsApp number
+
+   Country code +91
+   WITHOUT +
+*/
+
+const WHATSAPP_NUMBER = "917888450230";
+
+
+
+/* =====================================================
+   GET SAVED ORDER
+===================================================== */
+
+const savedOrder =
+    localStorage.getItem("cvextaResumeOrder");
+
+
+/*
+   If no order exists,
+   send customer back to details page.
+*/
+
+if (!savedOrder) {
+
+    alert(
+        "Your resume information was not found. Please enter your details again."
+    );
+
+    window.location.href =
+        "resume-details.html";
+
+}
+
+
+
+/* =====================================================
+   CONVERT SAVED DATA
+===================================================== */
+
+let order;
+
+try {
+
+    order = JSON.parse(savedOrder);
+
+} catch (error) {
+
+    alert(
+        "There was a problem loading your order."
+    );
+
+    window.location.href =
+        "resume-details.html";
+
+}
+
+
+
+/* =====================================================
+   DISPLAY ORDER INFORMATION
+===================================================== */
+
+const resumeName =
+    order.resumeName || "Professional Resume";
+
+
+const price =
+    Number(order.price) || 0;
+
+
+const customerName =
+    order.fullName || "Customer";
+
+
+
+document.getElementById("resumeName").textContent =
+    resumeName;
+
+
+document.getElementById("resumeType").textContent =
+    resumeName;
+
+
+document.getElementById("customerName").textContent =
+    customerName;
+
+
+document.getElementById("amount").textContent =
+    "₹" + price;
+
+
+
+/* =====================================================
+   GENERATE UNIQUE ORDER ID
+===================================================== */
+
+let orderId =
+    localStorage.getItem("cvextaOrderId");
+
+
+if (!orderId) {
+
+    orderId =
+        "CVX" +
+        Date.now();
+
+    localStorage.setItem(
+        "cvextaOrderId",
+        orderId
+    );
+
+}
+
+
+
+/* =====================================================
+   CREATE UPI PAYMENT LINK
+===================================================== */
+
+
+/*
+   UPI standard deep link.
+
+   pa = UPI ID
+   pn = Payee name
+   am = Amount
+   cu = Currency
+   tr = Transaction reference
+   tn = Transaction note
+*/
+
+const upiLink =
+
+    "upi://pay?" +
+
+    "pa=" +
+    encodeURIComponent(UPI_ID) +
+
+    "&pn=" +
+    encodeURIComponent(BUSINESS_NAME) +
+
+    "&am=" +
+    encodeURIComponent(price.toFixed(2)) +
+
+    "&cu=INR" +
+
+    "&tr=" +
+    encodeURIComponent(orderId) +
+
+    "&tn=" +
+    encodeURIComponent(
+        "CVexta Resume - " + orderId
+    );
+
+
+
+/* =====================================================
+   CREATE QR CODE
+===================================================== */
+
+
+/*
+   This uses a QR-code image service.
+
+   The QR contains the UPI payment link.
+*/
+
+const qrUrl =
+
+    "https://api.qrserver.com/v1/create-qr-code/?" +
+
+    "size=300x300&data=" +
+
+    encodeURIComponent(upiLink);
+
+
+document.getElementById("upiQr").src =
+    qrUrl;
+
+
+
+/* =====================================================
+   UPI BUTTON
+===================================================== */
+
+const payButton =
+    document.getElementById("payUpiButton");
+
+
+payButton.textContent =
+    "₹" + price + " — Pay by UPI";
+
+
+
+payButton.addEventListener(
+    "click",
+    function() {
+
+        /*
+           Open UPI application.
+        */
+
+        window.location.href =
+            upiLink;
+
+    }
+);
+
+
+
+/* =====================================================
+   PAYMENT COMPLETED
+===================================================== */
+
+document
+    .getElementById("paymentCompleted")
+    .addEventListener(
+        "click",
+        function() {
+
+
+            /*
+               Save local confirmation.
+               
+               IMPORTANT:
+               This does NOT verify payment.
+               
+               It only records that the customer
+               clicked the confirmation button.
+            */
+
+            localStorage.setItem(
+                "cvextaPaymentStatus",
+                "customer_confirmed"
+            );
+
+
+            localStorage.setItem(
+                "cvextaPaymentOrderId",
+                orderId
+            );
+
+
+
+            /*
+               Create WhatsApp message.
+            */
+
+            // ===============================
+// WHATSAPP MESSAGE
+// ===============================
+
+const order = JSON.parse(localStorage.getItem("cvextaResumeOrder")) || {};
+
+const messageText = `
+*CVexta.com – Resume Order*
+
+*ORDER DETAILS*
+Resume Type: ${order.resumeName || "Not provided"}
+Amount: ₹${order.price || order.amount || "Not provided"}
+Customer Name: ${order.fullName || "Not provided"}
+
+*PERSONAL INFORMATION*
+Full Name: ${order.fullName || "Not provided"}
+Professional Title: ${order.professionalTitle || "Not provided"}
+Email: ${order.email || "Not provided"}
+Phone: ${order.phone || "Not provided"}
+Location: ${order.location || "Not provided"}
+LinkedIn: ${order.linkedin || "Not provided"}
+
+*PROFESSIONAL SUMMARY*
+${order.summary || "Not provided"}
+
+*EDUCATION*
+${order.education || "Not provided"}
+
+*WORK EXPERIENCE*
+${order.experience || "Not provided"}
+
+*SKILLS*
+${order.skills || "Not provided"}
+
+*CERTIFICATIONS & TRAINING*
+${order.certifications || "Not provided"}
+
+*PROJECTS*
+${order.projects || "Not provided"}
+
+*LANGUAGES*
+${order.languages || "Not provided"}
+
+*ADDITIONAL INFORMATION*
+${order.additional || "Not provided"}
+
+*PAYMENT STATUS*
+Customer has confirmed payment and submitted the resume details.
+
+*ORDER ID*
+${localStorage.getItem("cvextaOrderId") || "Not generated"}
+
+Thank you*.
+`;
+
+const whatsappUrl =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(messageText);
+
+window.location.href = whatsappUrl;
+
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>

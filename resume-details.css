@@ -1,0 +1,943 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fb;
+    color: #111827;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+
+/* =====================================================
+   HEADER — SAME AS PAYMENT PAGE
+===================================================== */
+
+.main-header {
+    width: 100%;
+    padding: 20px 7%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo a {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.5px;
+}
+
+
+.main-header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+
+.main-header nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    transition: 0.25s;
+}
+
+
+.main-header nav a:hover {
+    color: #111827;
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.resume-hero {
+    text-align: center;
+    padding: 65px 20px 35px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.step-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+
+.resume-hero h1 {
+    margin: 0 0 12px;
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+
+.resume-hero p {
+    margin: 0 auto;
+    max-width: 650px;
+    color: #6b7280;
+    font-size: 17px;
+}
+
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-container {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.progress-step span {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5e7eb;
+    color: #6b7280;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+.progress-step.active {
+    color: #2563eb;
+}
+
+
+.progress-step.active span {
+    background: #2563eb;
+    color: white;
+}
+
+
+.progress-line {
+    height: 2px;
+    width: 70px;
+
+    background: #e5e7eb;
+
+    margin: 0 12px;
+}
+
+
+
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
+
+.resume-wrapper {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 10px 20px 70px;
+}
+
+
+
+/* =====================================================
+   SELECTED RESUME CARD
+===================================================== */
+
+.selected-resume-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.05);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.small-label {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 6px;
+}
+
+
+.selected-resume-card h2 {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+
+.price-box {
+    text-align: right;
+}
+
+
+.old-price {
+    display: block;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+    text-decoration: line-through;
+}
+
+
+.price-box strong {
+    display: block;
+
+    font-size: 28px;
+
+    color: #2563eb;
+}
+
+
+.saving {
+    display: block;
+
+    color: #16a34a;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+
+/* =====================================================
+   FORM SECTION
+===================================================== */
+
+.form-section {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.04);
+}
+
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+
+.section-number {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.section-heading h2 {
+    margin: 0 0 4px;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+}
+
+
+.section-heading p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+
+/* =====================================================
+   FORM GRID
+===================================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+.form-group {
+    width: 100%;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #374151;
+}
+
+
+.form-group label span {
+    color: #dc2626;
+}
+
+
+.form-group label small {
+    color: #9ca3af;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+
+/* =====================================================
+   PHOTO UPLOAD
+===================================================== */
+
+.photo-upload {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.upload-box {
+    width: 230px;
+
+    min-height: 180px;
+
+    border: 2px dashed #d1d5db;
+
+    border-radius: 15px;
+
+    background: #f9fafb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.upload-box:hover {
+    border-color: #2563eb;
+
+    background: #eff6ff;
+}
+
+
+.upload-box input {
+    display: none;
+}
+
+
+.upload-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.upload-box strong {
+    font-size: 14px;
+
+    color: #374151;
+}
+
+
+.upload-box span {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+}
+
+
+.photo-preview {
+    width: 150px;
+    height: 180px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #f3f4f6;
+
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.photo-preview img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/* =====================================================
+   AGREEMENT
+===================================================== */
+
+.agreement {
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+}
+
+
+.agreement label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    color: #4b5563;
+
+    cursor: pointer;
+}
+
+
+.agreement input {
+    margin-top: 4px;
+
+    accent-color: #2563eb;
+}
+
+
+.agreement a {
+    color: #2563eb;
+
+    font-weight: 700;
+}
+
+
+.agreement a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* =====================================================
+   CONTINUE BUTTON
+===================================================== */
+
+.continue-button {
+    width: 100%;
+
+    padding: 17px 25px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.continue-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(17, 24, 39, 0.18);
+}
+
+
+.secure-note {
+    margin: 12px auto 0;
+
+    text-align: center;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: #111827;
+
+    color: white;
+
+    padding-top: 50px;
+}
+
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 0 30px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.footer-brand h2 {
+    margin: 0 0 10px;
+
+    font-size: 24px;
+}
+
+
+.footer-brand p {
+    margin: 0;
+
+    max-width: 400px;
+
+    color: #9ca3af;
+}
+
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.footer-links a {
+    color: #d1d5db;
+
+    font-size: 14px;
+}
+
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #1f2937;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .main-header {
+        padding: 16px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .main-header nav {
+        width: 100%;
+
+        gap: 15px;
+    }
+
+
+    .main-header nav a {
+        font-size: 12px;
+    }
+
+
+    .resume-hero {
+        padding: 45px 20px 30px;
+    }
+
+
+    .resume-hero h1 {
+        font-size: 34px;
+    }
+
+
+    .resume-hero p {
+        font-size: 15px;
+    }
+
+
+    .progress-container {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 10px;
+    }
+
+
+    .progress-step {
+        font-size: 11px;
+    }
+
+
+    .progress-line {
+        width: 35px;
+
+        margin: 0 7px;
+    }
+
+
+    .resume-wrapper {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .selected-resume-card {
+        padding: 22px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .price-box {
+        text-align: left;
+    }
+
+
+    .form-section {
+        padding: 22px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+
+    .photo-upload {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .logo a {
+        font-size: 24px;
+    }
+
+
+    .main-header nav {
+        gap: 12px;
+    }
+
+
+    .main-header nav a {
+        font-size: 11px;
+    }
+
+
+    .resume-hero h1 {
+        font-size: 30px;
+    }
+
+
+    .progress-container {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    .progress-step span {
+        width: 28px;
+
+        height: 28px;
+    }
+
+
+    .form-section {
+        padding: 18px;
+    }
+
+
+    .section-heading {
+        gap: 10px;
+    }
+
+
+    .section-number {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .upload-box {
+        width: 100%;
+    }
+
+
+    .photo-preview {
+        width: 140px;
+
+        height: 170px;
+    }
+
+}

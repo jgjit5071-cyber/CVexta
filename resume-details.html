@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Enter your professional details and create your CV with CVexta.com.">
+
+    <title>Resume Details | CVexta.com</title>
+
+    <link rel="stylesheet"
+          href="resume-details.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER — SAME AS PAYMENT PAGE
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="logo">
+
+        <a href="index.html">
+            CVexta.com
+        </a>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="terms.html">
+            Terms & Conditions
+        </a>
+
+        <a href="Privacy7Policy.html">
+            Privacy Policy
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="resume-hero">
+
+    <span class="step-label">
+        STEP 1 OF 3
+    </span>
+
+    <h1>
+        Enter Your Resume Details
+    </h1>
+
+    <p>
+        Provide your professional information below.
+        We'll use these details to create your resume.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROGRESS
+===================================================== -->
+
+<div class="progress-container">
+
+    <div class="progress-step active">
+
+        <span>1</span>
+
+        Your Details
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step">
+
+        <span>2</span>
+
+        Payment
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step">
+
+        <span>3</span>
+
+        Resume Delivery
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="resume-wrapper">
+
+
+    <!-- =================================================
+         SELECTED RESUME
+    ================================================== -->
+
+    <section class="selected-resume-card">
+
+        <div>
+
+            <span class="small-label">
+                SELECTED RESUME
+            </span>
+
+            <h2 id="selectedResumeName">
+                Professional Resume
+            </h2>
+
+        </div>
+
+
+        <div class="price-box">
+
+            <span class="old-price"
+                  id="oldPrice">
+                ₹499
+            </span>
+
+            <strong id="currentPrice">
+                ₹299
+            </strong>
+
+            <span class="saving"
+                  id="savingText">
+                Save ₹200
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FORM
+    ================================================== -->
+
+    <form id="resumeForm">
+
+
+        <!-- =================================================
+             PERSONAL INFORMATION
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <div>
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+                    <p>
+                        Tell us about yourself.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="professionalTitle">
+                        Professional Title
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="professionalTitle"
+                        name="professionalTitle"
+                        placeholder="e.g. Medical Representative"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Location
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="City, State, Country"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="linkedin">
+                        LinkedIn Profile
+                        <small>(Optional)</small>
+                    </label>
+
+                    <input
+                        type="url"
+                        id="linkedin"
+                        name="linkedin"
+                        placeholder="https://linkedin.com/in/yourname">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFILE PHOTO
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <div>
+
+                    <h2>
+                        Profile Photo
+                    </h2>
+
+                    <p>
+                        Upload a professional photo for your resume.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="photo-upload">
+
+                <label for="profilePhoto"
+                       class="upload-box">
+
+                    <div class="upload-icon">
+                        +
+                    </div>
+
+                    <strong>
+                        Upload Profile Photo
+                    </strong>
+
+                    <span>
+                        JPG, JPEG or PNG
+                    </span>
+
+                    <input
+                        type="file"
+                        id="profilePhoto"
+                        name="profilePhoto"
+                        accept="image/jpeg,image/png">
+
+                </label>
+
+
+                <div id="photoPreview"
+                     class="photo-preview">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFESSIONAL SUMMARY
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    03
+                </span>
+
+                <div>
+
+                    <h2>
+                        Professional Summary / Career Objective
+                    </h2>
+
+                    <p>
+                        Give employers a quick overview of your professional profile.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="summary"
+                    name="summary"
+                    rows="6"
+                    placeholder="Write your professional summary or career objective..."></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EDUCATION
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    04
+                </span>
+
+                <div>
+
+                    <h2>
+                        Education
+                    </h2>
+
+                    <p>
+                        Add your educational qualifications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="education"
+                    name="education"
+                    rows="6"
+                    placeholder="Example:
+B.Pharm — XYZ University — 2022
+12th — ABC School — 2018"></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WORK EXPERIENCE
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    05
+                </span>
+
+                <div>
+
+                    <h2>
+                        Work Experience
+                    </h2>
+
+                    <p>
+                        Add your professional work experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="experience"
+                    name="experience"
+                    rows="8"
+                    placeholder="Example:
+Medical Representative — ABC Pharma
+2022 – Present
+• Managed assigned territory
+• Achieved monthly sales targets
+• Built strong doctor relationships"></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    06
+                </span>
+
+                <div>
+
+                    <h2>
+                        Skills
+                    </h2>
+
+                    <p>
+                        List your key professional skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="skills"
+                    name="skills"
+                    rows="5"
+                    placeholder="Example:
+Communication
+Sales & Negotiation
+Customer Relationship Management
+MS Office
+Team Management"></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CERTIFICATIONS
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    07
+                </span>
+
+                <div>
+
+                    <h2>
+                        Certifications & Training
+                    </h2>
+
+                    <p>
+                        Add relevant certifications, courses and training.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="certifications"
+                    name="certifications"
+                    rows="5"
+                    placeholder="Example:
+Digital Marketing Certification
+Advanced Excel Training
+Sales Excellence Program"></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    08
+                </span>
+
+                <div>
+
+                    <h2>
+                        Projects
+                    </h2>
+
+                    <p>
+                        Add important academic or professional projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="projects"
+                    name="projects"
+                    rows="5"
+                    placeholder="Describe your important projects..."></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LANGUAGES
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    09
+                </span>
+
+                <div>
+
+                    <h2>
+                        Languages
+                    </h2>
+
+                    <p>
+                        Mention languages you can speak, read or write.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="languages"
+                    name="languages"
+                    rows="4"
+                    placeholder="Example:
+English — Fluent
+Hindi — Fluent
+Punjabi — Native"></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ADDITIONAL INFORMATION
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    10
+                </span>
+
+                <div>
+
+                    <h2>
+                        Additional Information
+                    </h2>
+
+                    <p>
+                        Add anything else you want included in your resume.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    id="additional"
+                    name="additional"
+                    rows="5"
+                    placeholder="Awards, achievements, hobbies, interests, references, etc."></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AGREEMENT
+        ================================================== -->
+
+        <div class="agreement">
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="agreement"
+                    required>
+
+                <span>
+
+                    I agree to the
+                    <a href="terms.html"
+                       target="_blank">
+                        Terms & Conditions
+                    </a>
+
+                    and
+
+                    <a href="privacy.html"
+                       target="_blank">
+                        Privacy Policy
+                    </a>.
+
+                </span>
+
+            </label>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SUBMIT
+        ================================================== -->
+
+        <button
+            type="submit"
+            class="continue-button">
+
+            Continue to Secure Payment →
+
+        </button>
+
+
+        <p class="secure-note">
+            🔒 Your information is securely stored and used only
+            for creating your resume.
+        </p>
+
+
+    </form>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                CVexta.com
+            </h2>
+
+            <p>
+                Building better resumes today.
+                Building better careers tomorrow.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="terms.html">
+                Terms & Conditions
+            </a>
+
+            <a href="Privacy7Policy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CVexta.com. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   RESUME DATA
+===================================================== */
+
+const resumeData = {
+
+    professional: {
+        name: "Professional Resume",
+        original: 499,
+        price: 299
+    },
+
+    modern: {
+        name: "Modern Resume",
+        original: 599,
+        price: 399
+    },
+
+    executive: {
+        name: "Executive Resume",
+        original: 799,
+        price: 599
+    },
+
+    fresher: {
+        name: "Fresher Resume",
+        original: 399,
+        price: 299
+    },
+
+    ats: {
+        name: "ATS Resume",
+        original: 599,
+        price: 399
+    },
+
+    creative: {
+        name: "Creative Resume",
+        original: 899,
+        price: 699
+    }
+
+};
+
+
+
+/* =====================================================
+   GET SELECTED TEMPLATE
+===================================================== */
+
+const urlParams =
+    new URLSearchParams(window.location.search);
+
+
+const template =
+    urlParams.get("template") || "professional";
+
+
+const selected =
+    resumeData[template] ||
+    resumeData.professional;
+
+
+
+/* =====================================================
+   DISPLAY PRICE
+===================================================== */
+
+document.getElementById(
+    "selectedResumeName"
+).textContent = selected.name;
+
+
+document.getElementById(
+    "oldPrice"
+).textContent =
+    "₹" + selected.original;
+
+
+document.getElementById(
+    "currentPrice"
+).textContent =
+    "₹" + selected.price;
+
+
+document.getElementById(
+    "savingText"
+).textContent =
+    "Save ₹" +
+    (selected.original - selected.price);
+
+
+
+/* =====================================================
+   PROFILE PHOTO PREVIEW
+===================================================== */
+
+const profilePhoto =
+    document.getElementById("profilePhoto");
+
+
+const photoPreview =
+    document.getElementById("photoPreview");
+
+
+profilePhoto.addEventListener(
+    "change",
+    function() {
+
+        const file =
+            this.files[0];
+
+        if (!file) {
+
+            photoPreview.innerHTML = "";
+
+            return;
+
+        }
+
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload =
+            function(event) {
+
+                photoPreview.innerHTML =
+
+                    `<img src="${event.target.result}"
+                          alt="Profile Photo Preview">`;
+
+            };
+
+
+        reader.readAsDataURL(file);
+
+    }
+);
+
+
+
+/* =====================================================
+   FORM SUBMISSION
+===================================================== */
+
+document
+    .getElementById("resumeForm")
+    .addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const agreement =
+                document.getElementById(
+                    "agreement"
+                );
+
+
+            if (!agreement.checked) {
+
+                alert(
+                    "Please agree to the Terms & Conditions and Privacy Policy."
+                );
+
+                return;
+
+            }
+
+
+
+            /* -----------------------------------------
+               COLLECT FORM DATA
+            ----------------------------------------- */
+
+            const formData =
+                new FormData(this);
+
+
+            const resumeDetails = {
+
+                template: template,
+
+                resumeName: selected.name,
+
+                originalPrice:
+                    selected.original,
+
+                price:
+                    selected.price,
+
+                fullName:
+                    formData.get("fullName"),
+
+                professionalTitle:
+                    formData.get("professionalTitle"),
+
+                email:
+                    formData.get("email"),
+
+                phone:
+                    formData.get("phone"),
+
+                location:
+                    formData.get("location"),
+
+                linkedin:
+                    formData.get("linkedin"),
+
+                summary:
+                    formData.get("summary"),
+
+                education:
+                    formData.get("education"),
+
+                experience:
+                    formData.get("experience"),
+
+                skills:
+                    formData.get("skills"),
+
+                certifications:
+                    formData.get("certifications"),
+
+                projects:
+                    formData.get("projects"),
+
+                languages:
+                    formData.get("languages"),
+
+                additional:
+                    formData.get("additional")
+
+            };
+
+
+
+            /* -----------------------------------------
+               PROFILE PHOTO
+            ----------------------------------------- */
+
+            const photoFile =
+                profilePhoto.files[0];
+
+
+            if (photoFile) {
+
+                const reader =
+                    new FileReader();
+
+
+                reader.onload =
+                    function(event) {
+
+                        resumeDetails.profilePhoto =
+                            event.target.result;
+
+
+                        saveResumeOrder(
+                            resumeDetails
+                        );
+
+                    };
+
+
+                reader.readAsDataURL(
+                    photoFile
+                );
+
+            } else {
+
+                saveResumeOrder(
+                    resumeDetails
+                );
+
+            }
+
+        }
+    );
+
+
+
+/* =====================================================
+   SAVE ORDER
+===================================================== */
+
+function saveResumeOrder(
+    resumeDetails
+) {
+
+
+    localStorage.setItem(
+        "cvextaResumeOrder",
+        JSON.stringify(resumeDetails)
+    );
+
+
+
+    /* -----------------------------------------
+       CREATE ORDER ID
+    ----------------------------------------- */
+
+    let orderId =
+        localStorage.getItem(
+            "cvextaOrderId"
+        );
+
+
+    if (!orderId) {
+
+        orderId =
+            "CVX" +
+            Date.now();
+
+
+        localStorage.setItem(
+            "cvextaOrderId",
+            orderId
+        );
+
+    }
+
+
+
+    /* -----------------------------------------
+       GO TO PAYMENT
+    ----------------------------------------- */
+
+    window.location.href =
+        "payment.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

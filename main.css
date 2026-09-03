@@ -1,0 +1,2002 @@
+/* =========================================================
+   CVEXTA.COM
+   MAIN CSS
+   Complete Professional Version
+========================================================= */
+
+
+/* =========================================================
+   1. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #ffffff;
+    color: #243b53;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================================
+   2. HEADER
+========================================================= */
+
+.main-header {
+    width: 100%;
+    min-height: 78px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #243b53;
+
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    transition: 0.3s ease;
+}
+
+.logo a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   3. NAVIGATION
+========================================================= */
+
+.main-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 24px;
+}
+
+.main-header nav a {
+    position: relative;
+
+    text-decoration: none;
+    color: #52606d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 8px 0;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.main-header nav a:hover {
+    color: #2563eb;
+}
+
+.main-header nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #2563eb;
+
+    transition: width 0.3s ease;
+}
+
+.main-header nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   4. HOME HERO
+========================================================= */
+
+.home-hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 23, 42, 0.72),
+            rgba(15, 23, 42, 0.72)
+        ),
+        url("images/resume-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    width: 100%;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero-small-text {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d9e2ec;
+}
+
+.hero-content h1 {
+    margin-bottom: 25px;
+
+    font-size: 58px;
+    line-height: 1.15;
+
+    color: #ffffff;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #93c5fd;
+}
+
+.hero-content p {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #e5e7eb;
+}
+
+
+/* =========================================================
+   5. HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.secondary-button:hover {
+    background: #ffffff;
+    color: #243b53;
+}
+
+
+/* =========================================================
+   6. SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #2563eb;
+}
+
+.section-heading h2 {
+    margin: 12px 0;
+
+    font-size: 36px;
+    line-height: 1.3;
+
+    color: #243b53;
+}
+
+.section-heading p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #52606d;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   7. WHY SECTION
+========================================================= */
+
+.why-section {
+    padding: 90px 30px;
+}
+
+.benefits {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.benefit-card {
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(15, 23, 42, 0.08);
+}
+
+.benefit-icon {
+    margin-bottom: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+.benefit-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+.benefit-card p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #52606d;
+}
+
+
+/* =========================================================
+   8. RESUME SECTION
+========================================================= */
+
+.resume-section {
+    padding: 90px 30px;
+
+    background: #f8fafc;
+}
+
+.resume-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.resume-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.resume-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================================
+   9. RESUME PREVIEW
+========================================================= */
+
+.resume-preview {
+    height: 230px;
+
+    padding: 28px;
+
+    background: #f1f5f9;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.preview-header {
+    margin-bottom: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #243b53;
+}
+
+.preview-line {
+    width: 80%;
+
+    height: 7px;
+
+    margin-bottom: 10px;
+
+    background: #cbd5e1;
+
+    border-radius: 3px;
+}
+
+.preview-line.large {
+    width: 60%;
+    height: 13px;
+
+    background: #94a3b8;
+}
+
+.preview-line.short {
+    width: 45%;
+}
+
+.preview-section {
+    width: 35%;
+
+    height: 9px;
+
+    margin: 22px 0 12px;
+
+    background: #64748b;
+
+    border-radius: 3px;
+}
+
+
+/* =========================================================
+   10. RESUME CARD CONTENT
+========================================================= */
+
+.resume-card-content {
+    padding: 28px;
+}
+
+.resume-number {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #2563eb;
+}
+
+.resume-card-content h3 {
+    margin: 8px 0 10px;
+
+    font-size: 22px;
+}
+
+.resume-card-content p {
+    margin-bottom: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #52606d;
+}
+
+
+/* =========================================================
+   11. LAUNCH OFFER
+========================================================= */
+
+.launch-badge {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 6px 12px;
+
+    border-radius: 30px;
+
+    background: #fff7ed;
+
+    color: #ea580c;
+
+    border: 1px solid #fed7aa;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   12. RESUME PRICE BOX
+========================================================= */
+
+.resume-price-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    margin-bottom: 3px;
+}
+
+
+/* ORIGINAL PRICE */
+
+.old-price {
+    color: #9ca3af;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-decoration-line: line-through;
+
+    text-decoration-thickness: 2px;
+
+    text-decoration-color: #ef4444;
+}
+
+
+/* DISCOUNTED PRICE */
+
+.new-price {
+    color: #111827;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 29px;
+
+    font-weight: 900;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* SAVING */
+
+.saving-text {
+    margin-top: 2px;
+
+    margin-bottom: 18px;
+
+    color: #16a34a;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* OLD PRICE CLASS - BACKWARD COMPATIBILITY */
+
+.resume-price {
+    margin-bottom: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #243b53;
+}
+
+
+/* =========================================================
+   13. RESUME BUTTON
+========================================================= */
+
+.resume-button {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    background: #243b53;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.resume-button:hover {
+    background: #2563eb;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   14. PROCESS
+========================================================= */
+
+.process-section {
+    padding: 90px 30px;
+}
+
+.process-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.process-card {
+    text-align: center;
+
+    padding: 25px;
+}
+
+.process-number {
+    margin: 0 auto 18px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 700;
+}
+
+.process-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 19px;
+}
+
+.process-card p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #52606d;
+}
+
+
+/* =========================================================
+   15. HOME CTA
+========================================================= */
+
+.home-cta {
+    padding: 90px 25px;
+
+    text-align: center;
+
+    background: #243b53;
+
+    color: #ffffff;
+}
+
+.home-cta > div {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.home-cta span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #bfdbfe;
+}
+
+.home-cta h2 {
+    margin: 15px 0;
+
+    font-size: 38px;
+
+    line-height: 1.3;
+
+    color: #ffffff;
+}
+
+.home-cta p {
+    margin-bottom: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #d9e2ec;
+}
+
+.cta-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   16. DETAILS / PAYMENT HERO
+========================================================= */
+
+.details-hero,
+.payment-hero {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.details-hero > span,
+.payment-hero > span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #2563eb;
+}
+
+.details-hero h1,
+.payment-hero h1 {
+    margin: 12px 0;
+
+    font-size: 42px;
+
+    color: #243b53;
+}
+
+.details-hero p,
+.payment-hero p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #52606d;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   17. PROGRESS
+========================================================= */
+
+.progress-container {
+    max-width: 850px;
+
+    margin: 35px auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.progress-step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #94a3b8;
+
+    white-space: nowrap;
+}
+
+.progress-step span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e2e8f0;
+
+    color: #64748b;
+}
+
+.progress-step.active,
+.progress-step.completed {
+    color: #2563eb;
+}
+
+.progress-step.active span,
+.progress-step.completed span {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.progress-line {
+    width: 80px;
+    height: 2px;
+
+    margin: 0 12px;
+
+    background: #e2e8f0;
+}
+
+.completed-line {
+    background: #2563eb;
+}
+
+
+/* =========================================================
+   18. DETAILS WRAPPER
+========================================================= */
+
+.details-wrapper {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 20px 20px 80px;
+}
+
+
+/* =========================================================
+   19. SELECTED RESUME
+========================================================= */
+
+.selected-resume-box {
+    margin-bottom: 30px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 10px;
+}
+
+.selected-resume-box span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #2563eb;
+}
+
+.selected-resume-box h2 {
+    margin-top: 5px;
+
+    font-size: 24px;
+}
+
+.selected-price {
+    text-align: right;
+}
+
+.selected-price strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 24px;
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   20. FORM SECTION
+========================================================= */
+
+.form-section {
+    margin-bottom: 25px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+.form-section-heading {
+    display: flex;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.form-section-heading > span {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-section-heading h2 {
+    font-size: 24px;
+
+    line-height: 1.3;
+}
+
+.form-section-heading p {
+    margin-top: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   21. FORM GRID
+========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #334e68;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #243b53;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   22. AGREEMENT
+========================================================= */
+
+.agreement-box {
+    margin: 25px 0;
+
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+}
+
+.agreement-box label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    color: #52606d;
+}
+
+.agreement-box input {
+    margin-top: 5px;
+}
+
+.agreement-box a {
+    color: #2563eb;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.agreement-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   23. FORM SUBMIT
+========================================================= */
+
+.form-submit-area {
+    text-align: center;
+
+    padding: 15px 0;
+}
+
+.large-primary-button {
+    padding: 15px 32px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.large-primary-button span {
+    margin-left: 10px;
+
+    font-size: 18px;
+}
+
+.large-primary-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+.form-submit-area p {
+    margin-top: 12px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   24. PAYMENT WRAPPER
+========================================================= */
+
+.payment-wrapper {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 20px 20px 80px;
+}
+
+
+/* =========================================================
+   25. ORDER SUMMARY
+========================================================= */
+
+.order-summary {
+    margin-bottom: 25px;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.summary-heading {
+    margin-bottom: 25px;
+}
+
+.summary-heading span,
+.payment-box-heading span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #2563eb;
+}
+
+.summary-heading h2,
+.payment-box-heading h2 {
+    margin-top: 7px;
+
+    font-size: 26px;
+
+    color: #243b53;
+}
+
+.summary-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.summary-row span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+.summary-row strong {
+    text-align: right;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #243b53;
+}
+
+.summary-total {
+    margin-top: 15px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.summary-total span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.summary-total strong {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 28px;
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   26. PAYMENT BOX
+========================================================= */
+
+.payment-box {
+    padding: 35px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.payment-box-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.payment-box-heading p {
+    margin-top: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   27. UPI PAYMENT
+========================================================= */
+
+.upi-payment {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+.upi-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 800;
+}
+
+.upi-payment h3 {
+    margin-bottom: 5px;
+
+    font-size: 22px;
+}
+
+.upi-payment > p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+.upi-id-box {
+    max-width: 350px;
+
+    margin: 20px auto;
+
+    padding: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 7px;
+}
+
+.upi-id-box span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #64748b;
+}
+
+.upi-id-box strong {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    color: #243b53;
+}
+
+.upi-button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.upi-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+.payment-note {
+    max-width: 550px;
+
+    margin: 18px auto 0;
+
+    font-size: 12px !important;
+
+    color: #94a3b8 !important;
+}
+
+
+/* =========================================================
+   28. PAYMENT INSTRUCTIONS
+========================================================= */
+
+.payment-instructions {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+}
+
+.payment-instructions h3 {
+    margin-bottom: 15px;
+
+    font-size: 19px;
+}
+
+.payment-instructions ol {
+    padding-left: 22px;
+}
+
+.payment-instructions li {
+    margin-bottom: 8px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #52606d;
+}
+
+
+/* =========================================================
+   29. PAYMENT CONFIRMATION
+========================================================= */
+
+.payment-confirmation {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+}
+
+.payment-confirmation label {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #334e68;
+}
+
+.payment-confirmation input {
+    width: 17px;
+    height: 17px;
+}
+
+.whatsapp-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background: #15803d;
+
+    transform: translateY(-2px);
+}
+
+.payment-warning {
+    margin-top: 12px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   30. FOOTER
+========================================================= */
+
+.site-footer {
+    background: #111827;
+
+    color: #ffffff;
+}
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer-brand {
+    flex: 1;
+}
+
+.footer-brand h2 {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+}
+
+.footer-brand p {
+    max-width: 350px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    color: #9ca3af;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    gap: 12px 24px;
+}
+
+.footer-links a {
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    color: #d1d5db;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #374151;
+}
+
+.footer-bottom p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   31. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resume-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-header {
+        padding: 0 4%;
+    }
+
+    .main-header nav {
+        gap: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   32. MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-header {
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .main-header nav {
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px 14px;
+    }
+
+    .main-header nav a {
+        font-size: 12px;
+    }
+
+    .home-hero {
+        min-height: 580px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .benefits,
+    .resume-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-section,
+    .resume-section,
+    .process-section {
+        padding: 65px 20px;
+    }
+
+    .home-cta {
+        padding: 65px 20px;
+    }
+
+    .home-cta h2 {
+        font-size: 30px;
+    }
+
+    .details-hero h1,
+    .payment-hero h1 {
+        font-size: 34px;
+    }
+
+    .progress-container {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 10px;
+    }
+
+    .progress-step {
+        font-size: 10px;
+    }
+
+    .progress-line {
+        width: 40px;
+
+        min-width: 40px;
+    }
+
+    .selected-resume-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .selected-price {
+        text-align: left;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .form-section {
+        padding: 25px 20px;
+    }
+
+    .form-section-heading h2 {
+        font-size: 21px;
+    }
+
+    .payment-box,
+    .order-summary {
+        padding: 25px 20px;
+    }
+
+    .summary-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+    .summary-row strong {
+        text-align: left;
+    }
+
+    .summary-total {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 20px;
+    }
+
+    .footer-brand p {
+        margin: auto;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    /* Discount price on mobile */
+
+    .resume-price-box {
+        gap: 10px;
+    }
+
+    .old-price {
+        font-size: 15px;
+    }
+
+    .new-price {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   33. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo a {
+        font-size: 25px;
+    }
+
+    .main-header nav {
+        gap: 7px 10px;
+    }
+
+    .main-header nav a {
+        font-size: 11px;
+    }
+
+    .home-hero {
+        min-height: 540px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+    .details-hero,
+    .payment-hero {
+        padding: 55px 18px;
+    }
+
+    .details-hero h1,
+    .payment-hero h1 {
+        font-size: 30px;
+    }
+
+    .selected-resume-box h2 {
+        font-size: 21px;
+    }
+
+    .form-section {
+        padding: 22px 16px;
+    }
+
+    .upi-payment {
+        padding: 25px 15px;
+    }
+
+    .large-primary-button {
+        width: 100%;
+    }
+
+    .resume-card-content {
+        padding: 22px;
+    }
+
+    .resume-preview {
+        height: 210px;
+    }
+
+    .launch-badge {
+        font-size: 10px;
+
+        padding: 5px 10px;
+    }
+
+    .resume-price-box {
+        gap: 8px;
+    }
+
+    .old-price {
+        font-size: 14px;
+    }
+
+    .new-price {
+        font-size: 25px;
+    }
+
+    .saving-text {
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,1116 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fb;
+    color: #111827;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.main-header {
+
+    width: 100%;
+
+    padding: 20px 7%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+.logo a {
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    color: #111827;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.main-header nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.main-header nav a {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #4b5563;
+
+    transition: 0.25s;
+
+}
+
+
+.main-header nav a:hover {
+
+    color: #111827;
+
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.payment-hero {
+
+    text-align: center;
+
+    padding: 65px 20px 35px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+.step-label {
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #2563eb;
+
+    margin-bottom: 12px;
+
+}
+
+
+.payment-hero h1 {
+
+    margin: 0 0 12px;
+
+    font-size: 46px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+}
+
+
+.payment-hero p {
+
+    margin: 0 auto;
+
+    max-width: 650px;
+
+    color: #6b7280;
+
+    font-size: 17px;
+
+}
+
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-container {
+
+    max-width: 700px;
+
+    margin: 35px auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.progress-step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.progress-step span {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e5e7eb;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+.progress-step.active {
+
+    color: #2563eb;
+
+}
+
+
+.progress-step.active span {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+.progress-step.completed {
+
+    color: #16a34a;
+
+}
+
+
+.progress-step.completed span {
+
+    background: #16a34a;
+
+    color: white;
+
+}
+
+
+.progress-line {
+
+    height: 2px;
+
+    width: 70px;
+
+    background: #e5e7eb;
+
+    margin: 0 12px;
+
+}
+
+
+.active-line {
+
+    background: #16a34a;
+
+}
+
+
+
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
+
+.payment-wrapper {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 10px 20px 70px;
+
+}
+
+
+
+/* =====================================================
+   ORDER CARD
+===================================================== */
+
+.order-card {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 22px;
+
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+
+}
+
+
+.small-label {
+
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.card-heading h2 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+}
+
+
+.order-details {
+
+    margin-top: 25px;
+
+}
+
+
+.order-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #f0f2f5;
+
+}
+
+
+.order-row span {
+
+    color: #6b7280;
+
+}
+
+
+.order-row strong {
+
+    text-align: right;
+
+}
+
+
+.total-row {
+
+    border-bottom: 0;
+
+    padding-bottom: 0;
+
+    margin-top: 5px;
+
+}
+
+
+.total-row strong {
+
+    font-size: 25px;
+
+    color: #2563eb;
+
+}
+
+
+
+/* =====================================================
+   PAYMENT CARD
+===================================================== */
+
+.payment-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 22px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.07);
+
+}
+
+
+.payment-card-header h2 {
+
+    margin: 5px 0 10px;
+
+    font-size: 30px;
+
+}
+
+
+.payment-card-header p {
+
+    margin: 0 auto;
+
+    max-width: 600px;
+
+    color: #6b7280;
+
+}
+
+
+
+/* =====================================================
+   QR
+===================================================== */
+
+.qr-section {
+
+    margin-top: 30px;
+
+}
+
+
+.qr-box {
+
+    width: 270px;
+
+    height: 270px;
+
+    margin: 0 auto;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.qr-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+.scan-text {
+
+    margin: 15px auto 0;
+
+    max-width: 500px;
+
+    font-size: 14px;
+
+    color: #6b7280;
+
+}
+
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.or-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0;
+
+}
+
+
+.or-divider::before,
+.or-divider::after {
+
+    content: "";
+
+    height: 1px;
+
+    background: #e5e7eb;
+
+    flex: 1;
+
+}
+
+
+.or-divider span {
+
+    color: #9ca3af;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+
+/* =====================================================
+   UPI BUTTON
+===================================================== */
+
+.upi-button {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding: 17px 25px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+
+.upi-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.18);
+
+}
+
+
+.upi-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #111827;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 900;
+
+}
+
+
+.upi-note {
+
+    margin: 12px auto 0;
+
+    max-width: 600px;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+
+}
+
+
+
+/* =====================================================
+   INSTRUCTIONS
+===================================================== */
+
+.instructions {
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+}
+
+
+.instructions h3 {
+
+    margin: 0 0 18px;
+
+    font-size: 18px;
+
+}
+
+
+.instruction {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.instruction:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.instruction span {
+
+    flex-shrink: 0;
+
+    width: 27px;
+
+    height: 27px;
+
+    border-radius: 50%;
+
+    background: #e5e7eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.instruction p {
+
+    margin: 2px 0 0;
+
+    font-size: 14px;
+
+    color: #4b5563;
+
+}
+
+
+
+/* =====================================================
+   PAYMENT CONFIRMATION
+===================================================== */
+
+.payment-confirmation {
+
+    margin-top: 35px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #e5e7eb;
+
+}
+
+
+.completed-button {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 17px 25px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background: #16a34a;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+
+.completed-button:hover {
+
+    background: #15803d;
+
+    transform: translateY(-2px);
+
+}
+
+
+.payment-confirmation p {
+
+    margin: 12px auto 0;
+
+    max-width: 550px;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+
+}
+
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+.security-box {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 22px;
+
+    padding: 22px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #dcfce7;
+
+    border-radius: 15px;
+
+}
+
+
+.security-icon {
+
+    font-size: 25px;
+
+}
+
+
+.security-box h3 {
+
+    margin: 0 0 4px;
+
+    font-size: 16px;
+
+}
+
+
+.security-box p {
+
+    margin: 0;
+
+    color: #4b5563;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    background: #111827;
+
+    color: white;
+
+    padding-top: 50px;
+
+}
+
+
+.footer-content {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 0 30px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+}
+
+
+.footer-brand h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 24px;
+
+}
+
+
+.footer-brand p {
+
+    margin: 0;
+
+    max-width: 400px;
+
+    color: #9ca3af;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.footer-links a {
+
+    color: #d1d5db;
+
+    font-size: 14px;
+
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid #1f2937;
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+
+    .main-header {
+
+        padding: 16px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .main-header nav {
+
+        width: 100%;
+
+        gap: 15px;
+
+    }
+
+
+    .main-header nav a {
+
+        font-size: 12px;
+
+    }
+
+
+    .payment-hero {
+
+        padding: 45px 20px 30px;
+
+    }
+
+
+    .payment-hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .payment-hero p {
+
+        font-size: 15px;
+
+    }
+
+
+    .progress-container {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 10px;
+
+    }
+
+
+    .progress-step {
+
+        font-size: 11px;
+
+    }
+
+
+    .progress-line {
+
+        width: 35px;
+
+        margin: 0 7px;
+
+    }
+
+
+    .payment-wrapper {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    .order-card {
+
+        padding: 22px;
+
+    }
+
+
+    .payment-card {
+
+        padding: 25px 18px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .payment-card-header h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .qr-box {
+
+        width: 230px;
+
+        height: 230px;
+
+    }
+
+
+    .order-row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+
+    }
+
+
+    .order-row strong {
+
+        text-align: left;
+
+    }
+
+
+    .total-row {
+
+        flex-direction: row;
+
+        align-items: center;
+
+    }
+
+
+    .total-row strong {
+
+        text-align: right;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+    }
+
+}
