@@ -563,12 +563,6 @@ try {
 
 }
 
-
-
-/* =====================================================
-   DISPLAY ORDER INFORMATION
-===================================================== */
-
 const resumeName =
     order.resumeName || "Professional Resume";
 
@@ -597,12 +591,6 @@ document.getElementById("customerName").textContent =
 document.getElementById("amount").textContent =
     "₹" + price;
 
-
-
-/* =====================================================
-   GENERATE UNIQUE ORDER ID
-===================================================== */
-
 let orderId =
     localStorage.getItem("cvextaOrderId");
 
@@ -620,13 +608,6 @@ if (!orderId) {
 
 }
 
-
-
-/* =====================================================
-   CREATE UPI PAYMENT LINK
-===================================================== */
-
-
 /*
    UPI standard deep link.
 
@@ -643,10 +624,10 @@ const upiLink =
     "upi://pay?" +
 
     "pa=" +
-    encodeURIComponent(UPI_ID) +
+    encodeURIComponent(jagjit.js301@okicici) +
 
     "&pn=" +
-    encodeURIComponent(BUSINESS_NAME) +
+    encodeURIComponent(CVexta.com) +
 
     "&am=" +
     encodeURIComponent(price.toFixed(2)) +
