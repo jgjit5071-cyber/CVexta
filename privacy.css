@@ -1,1081 +1,699 @@
 /* =====================================================
-   GLOBAL
+GLOBAL
 ===================================================== */
 
 * {
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fb;
-    color: #111827;
-    line-height: 1.6;
+font-family: Georgia, "Times New Roman", serif;
+background: #ffffff;
+color: #243b53;
+line-height: 1.7;
 }
-
-button,
-a {
-    font-family: inherit;
-}
-
-button {
-    cursor: pointer;
-}
-
 
 /* =====================================================
-   HEADER
+HEADER
 ===================================================== */
 
-.main-header {
-    width: 100%;
-    height: 78px;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-    display: flex;
-    align-items: center;
+.about-header {
+width: 100%;
+min-height: 78px;
+
+```
+padding: 0 6%;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+background: #ffffff;
+
+border-bottom: 1px solid #e5e7eb;
+
+position: sticky;
+top: 0;
+
+z-index: 1000;
+```
+
 }
 
-.header-inner {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px;
+.about-header .logo a {
+text-decoration: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+```
+font-size: 28px;
+font-weight: 700;
+
+color: #243b53;
+
+letter-spacing: -0.5px;
+
+transition: color 0.3s ease;
+```
+
 }
 
-.logo {
-    text-decoration: none;
-    color: #2563eb;
+.about-header .logo a:hover {
+color: #2563eb;
+}
 
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 27px;
-    font-weight: 700;
+.about-header nav {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+
+```
+gap: 24px;
+```
+
+}
+
+.about-header nav a {
+position: relative;
+
+```
+text-decoration: none;
+
+color: #52606d;
+
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 14px;
+font-weight: 600;
+
+padding: 8px 0;
+
+white-space: nowrap;
+
+transition: color 0.3s ease;
+```
+
+}
+
+.about-header nav a:hover {
+color: #2563eb;
+}
+
+.about-header nav a::after {
+content: "";
+
+```
+position: absolute;
+left: 0;
+bottom: 0;
+
+width: 0;
+height: 2px;
+
+background: #2563eb;
+
+transition: width 0.3s ease;
+```
+
+}
+
+.about-header nav a:hover::after {
+width: 100%;
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.privacy-hero {
+text-align: center;
+
+```
+padding: 90px 20px 75px;
+
+background: #ffffff;
+
+border-bottom: 1px solid #f1f5f9;
+```
+
+}
+
+.privacy-hero h1 {
+margin-bottom: 14px;
+
+```
+font-size: 48px;
+
+line-height: 1.2;
+
+font-weight: 700;
+
+color: #243b53;
+
+letter-spacing: -1px;
+```
+
+}
+
+.privacy-hero p {
+margin: 0 auto;
+
+```
+max-width: 650px;
+
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 17px;
+
+line-height: 1.6;
+
+color: #52606d;
+```
+
+}
+
+.privacy-hero .updated {
+margin-top: 10px;
+
+```
+font-size: 14px;
+
+color: #7b8794;
+```
+
+}
+
+/* =====================================================
+MAIN CONTAINER
+===================================================== */
+
+.privacy-container {
+width: 100%;
+
+```
+max-width: 950px;
+
+margin: 0 auto;
+
+padding: 70px 30px 100px;
+```
+
+}
+
+/* =====================================================
+PRIVACY SECTIONS
+===================================================== */
+
+.privacy-section {
+margin-bottom: 48px;
+}
+
+.privacy-section h2 {
+margin-bottom: 15px;
+
+```
+font-size: 27px;
+
+line-height: 1.3;
+
+font-weight: 700;
+
+color: #243b53;
+```
+
+}
+
+.privacy-section h3 {
+margin: 25px 0 12px;
+
+```
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 16px;
+
+font-weight: 700;
+
+color: #243b53;
+```
+
+}
+
+.privacy-section p {
+margin-bottom: 14px;
+
+```
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 15.5px;
+
+line-height: 1.8;
+
+color: #52606d;
+```
+
+}
+
+.privacy-section p:last-child {
+margin-bottom: 0;
+}
+
+/* =====================================================
+LISTS
+===================================================== */
+
+.privacy-section ul {
+margin: 15px 0 0;
+
+```
+padding-left: 22px;
+
+font-family: Arial, Helvetica, sans-serif;
+
+color: #52606d;
+```
+
+}
+
+.privacy-section li {
+margin-bottom: 9px;
+
+```
+padding-left: 5px;
+
+font-size: 15px;
+
+line-height: 1.7;
+```
+
+}
+
+.privacy-section li:last-child {
+margin-bottom: 0;
+}
+
+/* =====================================================
+RELATED LINKS
+===================================================== */
+
+.privacy-links {
+margin-top: 10px;
+
+```
+padding: 30px;
+
+background: #f8fafc;
+
+border: 1px solid #e5e7eb;
+
+border-radius: 8px;
+```
+
+}
+
+.privacy-links h2 {
+margin-bottom: 18px;
+
+```
+font-size: 24px;
+
+color: #243b53;
+```
+
+}
+
+.privacy-links a {
+display: inline-block;
+
+```
+margin: 5px 10px 5px 0;
+
+padding: 10px 18px;
+
+background: #2563eb;
+
+color: #ffffff;
+
+text-decoration: none;
+
+border-radius: 6px;
+
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 14px;
+
+font-weight: 600;
+
+transition: all 0.3s ease;
+```
+
+}
+
+.privacy-links a:hover {
+background: #1d4ed8;
+
+```
+transform: translateY(-1px);
+```
+
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+.site-footer {
+background: #111827;
+
+```
+color: #ffffff;
+
+margin-top: 20px;
+```
+
+}
+
+.footer-content {
+max-width: 1100px;
+
+```
+margin: 0 auto;
+
+padding: 55px 30px;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: flex-start;
+
+gap: 50px;
+```
+
+}
+
+.footer-brand {
+max-width: 400px;
+}
+
+.footer-brand h2 {
+margin-bottom: 10px;
+
+```
+font-size: 25px;
+
+color: #ffffff;
+```
+
+}
+
+.footer-brand p {
+font-family: Arial, Helvetica, sans-serif;
+
+```
+font-size: 14px;
+
+line-height: 1.7;
+
+color: #9ca3af;
+```
+
+}
+
+.footer-links {
+display: flex;
+
+```
+flex-wrap: wrap;
+
+justify-content: flex-end;
+
+gap: 12px 25px;
+```
+
+}
+
+.footer-links a {
+text-decoration: none;
+
+```
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 14px;
+
+color: #d1d5db;
+
+transition: color 0.3s ease;
+```
+
+}
+
+.footer-links a:hover {
+color: #ffffff;
+}
+
+.footer-bottom {
+border-top: 1px solid #374151;
+
+```
+text-align: center;
+
+padding: 20px;
+```
+
+}
+
+.footer-bottom p {
+margin: 0;
+
+```
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 13px;
+
+color: #9ca3af;
+```
+
+}
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+```
+.about-header {
+    padding: 0 4%;
+}
+
+.about-header nav {
+    gap: 15px;
+}
+
+.about-header nav a {
+    font-size: 13px;
+}
+
+.privacy-container {
+    max-width: 850px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+}
+```
+
+}
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+```
+.about-header {
+    min-height: auto;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.about-header .logo a {
+    font-size: 26px;
+}
+
+.about-header nav {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px 16px;
+}
+
+.about-header nav a {
+    font-size: 13px;
+}
+
+.privacy-hero {
+    padding: 65px 20px 55px;
+}
+
+.privacy-hero h1 {
+    font-size: 38px;
 
     letter-spacing: -0.5px;
 }
 
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #374151;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition:
-        color 0.2s ease;
-}
-
-.main-nav a:hover {
-    color: #2563eb;
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.payment-hero {
-    text-align: center;
-    padding: 58px 20px 38px;
-}
-
-.step-label {
-    display: inline-block;
-
-    padding: 7px 14px;
-
-    border-radius: 50px;
-
-    background: #eff6ff;
-    color: #2563eb;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-.payment-hero h1 {
-    margin: 16px 0 10px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 42px;
-    line-height: 1.15;
-
-    color: #111827;
-}
-
-.payment-hero p {
-    max-width: 650px;
-    margin: 0 auto;
-
-    color: #6b7280;
+.privacy-hero p {
     font-size: 16px;
 }
 
-
-/* =====================================================
-   PROGRESS
-===================================================== */
-
-.progress-container {
-    max-width: 850px;
-    margin: 0 auto 50px;
-
-    padding: 0 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.privacy-container {
+    padding: 50px 20px 70px;
 }
 
-.progress-step {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-
-    color: #9ca3af;
-
-    white-space: nowrap;
+.privacy-section {
+    margin-bottom: 40px;
 }
 
-.progress-step span {
-    width: 34px;
-    height: 34px;
-
-    border-radius: 50%;
-
-    background: #e5e7eb;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.progress-step strong {
-    font-size: 13px;
-}
-
-.progress-step.completed,
-.progress-step.active {
-    color: #2563eb;
-}
-
-.progress-step.completed span,
-.progress-step.active span {
-    background: #2563eb;
-    color: #ffffff;
-}
-
-.progress-line {
-    flex: 1;
-
-    height: 2px;
-
-    max-width: 120px;
-
-    margin: 0 14px;
-
-    background: #e5e7eb;
-}
-
-.progress-line.active-line {
-    background: #2563eb;
-}
-
-
-/* =====================================================
-   MAIN WRAPPER
-===================================================== */
-
-.payment-wrapper {
-    width: 100%;
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 0 20px 70px;
-}
-
-
-/* =====================================================
-   ORDER CARD
-===================================================== */
-
-.order-card {
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
-
-    padding: 30px;
-
-    margin-bottom: 24px;
-
-    box-shadow:
-        0 10px 30px rgba(17, 24, 39, 0.05);
-}
-
-.card-heading {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding-bottom: 22px;
-
-    border-bottom: 1px solid #eef0f4;
-}
-
-.small-label {
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: #6b7280;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 1.4px;
-}
-
-.card-heading h2 {
-    margin: 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-
+.privacy-section h2 {
     font-size: 24px;
 
-    color: #111827;
+    margin-bottom: 12px;
 }
 
-.order-badge {
-    padding: 6px 10px;
-
-    border-radius: 50px;
-
-    background: #ecfdf5;
-    color: #047857;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 0.8px;
-}
-
-.order-details {
-    padding-top: 8px;
-}
-
-.order-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 16px 0;
-
-    border-bottom: 1px solid #f0f2f5;
-}
-
-.order-row:last-child {
-    border-bottom: none;
-}
-
-.order-row span {
-    color: #6b7280;
-    font-size: 14px;
-}
-
-.order-row strong {
-    color: #111827;
-    font-size: 14px;
-    text-align: right;
-}
-
-.total-row {
-    padding-top: 20px;
-    margin-top: 5px;
-}
-
-.total-row span {
-    color: #111827;
-    font-weight: 700;
-}
-
-.total-row strong {
-    color: #2563eb;
-    font-size: 25px;
-}
-
-
-/* =====================================================
-   PAYMENT CARD
-===================================================== */
-
-.payment-card {
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 20px;
-
-    padding: 40px;
-
-    text-align: center;
-
-    box-shadow:
-        0 15px 40px rgba(17, 24, 39, 0.07);
-}
-
-.payment-card-header {
-    max-width: 650px;
-    margin: 0 auto 30px;
-}
-
-.payment-card-header h2 {
-    margin: 0 0 10px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 29px;
-
-    color: #111827;
-}
-
-.payment-card-header p {
-    margin: 0;
-
-    color: #6b7280;
-
+.privacy-section h3 {
     font-size: 15px;
 }
 
-
-/* =====================================================
-   PAY BUTTON
-===================================================== */
-
-.pay-button {
-    width: 100%;
-    max-width: 500px;
-
-    min-height: 62px;
-
-    border: none;
-    border-radius: 12px;
-
-    background: #2563eb;
-    color: #ffffff;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    font-size: 17px;
-    font-weight: 800;
-
-    box-shadow:
-        0 10px 24px rgba(37, 99, 235, 0.22);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
-}
-
-.pay-button:hover:not(:disabled) {
-    background: #1d4ed8;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 14px 30px rgba(37, 99, 235, 0.28);
-}
-
-.pay-button:active:not(:disabled) {
-    transform: translateY(0);
-}
-
-.pay-button:disabled {
-    opacity: 0.65;
-    cursor: not-allowed;
-}
-
-.pay-button-icon {
-    width: 32px;
-    height: 32px;
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.16);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 16px;
-}
-
-
-/* =====================================================
-   PAYMENT METHODS
-===================================================== */
-
-.payment-methods {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 18px;
-}
-
-.payment-methods span {
-    padding: 6px 11px;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 50px;
-
-    background: #fafafa;
-
-    color: #6b7280;
-
-    font-size: 11px;
-    font-weight: 700;
-}
-
-
-/* =====================================================
-   LOADING
-===================================================== */
-
-.payment-loading {
-    display: none;
-
-    margin: 28px auto 0;
-
-    max-width: 500px;
-
-    padding: 18px;
-
-    border-radius: 12px;
-
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-}
-
-.payment-loading.show {
-    display: block;
-}
-
-.loading-spinner {
-    width: 30px;
-    height: 30px;
-
-    margin: 0 auto 10px;
-
-    border: 3px solid #dbeafe;
-    border-top-color: #2563eb;
-
-    border-radius: 50%;
-
-    animation:
-        cvextaSpin 0.8s linear infinite;
-}
-
-@keyframes cvextaSpin {
-
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-.payment-loading p {
-    margin: 0;
-
-    color: #4b5563;
-
-    font-size: 13px;
-    font-weight: 600;
-}
-
-
-/* =====================================================
-   PAYMENT SUCCESS
-===================================================== */
-
-.payment-success {
-    display: none;
-
-    margin-top: 30px;
-
-    padding: 30px 20px;
-
-    border-radius: 15px;
-
-    background: #ecfdf5;
-    border: 1px solid #a7f3d0;
-}
-
-.payment-success.show {
-    display: block;
-}
-
-.success-icon {
-    width: 55px;
-    height: 55px;
-
-    margin: 0 auto 15px;
-
-    border-radius: 50%;
-
-    background: #10b981;
-    color: #ffffff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.payment-success h3 {
-    margin: 0 0 8px;
-
-    color: #065f46;
-
-    font-size: 21px;
-}
-
-.payment-success p {
-    max-width: 520px;
-
-    margin: 0 auto 22px;
-
-    color: #047857;
-
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   WHATSAPP BUTTON
-===================================================== */
-
-.whatsapp-button {
-    width: 100%;
-    max-width: 400px;
-
-    min-height: 54px;
-
-    border: none;
-    border-radius: 10px;
-
-    background: #16a34a;
-    color: #ffffff;
-
+.privacy-section p {
     font-size: 15px;
-    font-weight: 800;
 
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
+    line-height: 1.75;
 }
 
-.whatsapp-button:hover {
-    background: #15803d;
-
-    transform: translateY(-2px);
+.privacy-section li {
+    font-size: 14.5px;
 }
 
-
-/* =====================================================
-   PAYMENT ERROR
-===================================================== */
-
-.payment-error {
-    display: none;
-
-    max-width: 650px;
-
-    margin: 25px auto 0;
-
-    padding: 15px 18px;
-
-    border-radius: 10px;
-
-    background: #fef2f2;
-    border: 1px solid #fecaca;
-
-    color: #b91c1c;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    text-align: left;
+.privacy-links {
+    padding: 25px 20px;
 }
 
-.payment-error.show {
-    display: block;
+.privacy-links h2 {
+    font-size: 22px;
 }
 
-
-/* =====================================================
-   SECURE NOTE
-===================================================== */
-
-.secure-note {
-    max-width: 650px;
-
-    margin: 35px auto 0;
-
-    padding: 20px;
-
-    display: flex;
-    align-items: flex-start;
-
-    gap: 14px;
-
-    text-align: left;
-
-    background: #f8fafc;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 13px;
-}
-
-.secure-icon {
-    width: 38px;
-    height: 38px;
-
-    flex: 0 0 38px;
-
-    border-radius: 10px;
-
-    background: #eff6ff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 17px;
-}
-
-.secure-note strong {
+.privacy-links a {
     display: block;
 
-    margin-bottom: 4px;
+    width: 100%;
 
-    color: #111827;
+    margin: 8px 0;
 
-    font-size: 14px;
-}
-
-.secure-note p {
-    margin: 0;
-
-    color: #6b7280;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-}
-
-
-/* =====================================================
-   INSTRUCTIONS CARD
-===================================================== */
-
-.instructions-card {
-    margin-top: 25px;
-
-    padding: 35px;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
-
-    box-shadow:
-        0 10px 30px rgba(17, 24, 39, 0.04);
-}
-
-.instructions-header {
     text-align: center;
-
-    margin-bottom: 28px;
-}
-
-.instructions-header h2 {
-    margin: 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 26px;
-
-    color: #111827;
-}
-
-.instruction-list {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 20px;
-}
-
-.instruction {
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 14px;
-
-    padding: 20px;
-
-    border: 1px solid #eef0f4;
-
-    border-radius: 13px;
-
-    background: #fafbfc;
-}
-
-.instruction-number {
-    width: 34px;
-    height: 34px;
-
-    flex: 0 0 34px;
-
-    border-radius: 50%;
-
-    background: #eff6ff;
-    color: #2563eb;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 13px;
-    font-weight: 800;
-}
-
-.instruction h3 {
-    margin: 0 0 5px;
-
-    color: #111827;
-
-    font-size: 14px;
-}
-
-.instruction p {
-    margin: 0;
-
-    color: #6b7280;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.site-footer {
-    background: #111827;
-    color: #ffffff;
-
-    margin-top: 30px;
 }
 
 .footer-content {
-    max-width: 1200px;
+    padding: 45px 25px;
 
-    margin: 0 auto;
-
-    padding: 45px 30px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 50px;
-}
-
-.footer-brand h2 {
-    margin: 0 0 8px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 24px;
-}
-
-.footer-brand p {
-    margin: 0;
-
-    color: #9ca3af;
-
-    font-size: 13px;
-}
-
-.footer-links {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: flex-end;
-
-    gap: 22px;
-}
-
-.footer-links a {
-    color: #d1d5db;
-
-    text-decoration: none;
-
-    font-size: 12px;
-    font-weight: 600;
-
-    transition:
-        color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-.footer-bottom {
-    border-top: 1px solid #1f2937;
+    flex-direction: column;
 
     text-align: center;
 
-    padding: 18px 20px;
+    align-items: center;
+
+    gap: 30px;
 }
 
-.footer-bottom p {
-    margin: 0;
-
-    color: #6b7280;
-
-    font-size: 11px;
+.footer-brand {
+    max-width: 500px;
 }
 
+.footer-links {
+    justify-content: center;
+
+    gap: 12px 20px;
+}
+```
+
+}
 
 /* =====================================================
-   RESPONSIVE — TABLET
+SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
 
-    .main-header {
-        height: auto;
-        min-height: 78px;
-    }
-
-    .header-inner {
-        padding-top: 18px;
-        padding-bottom: 18px;
-
-        flex-direction: column;
-
-        gap: 14px;
-    }
-
-    .main-nav {
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 12px 20px;
-    }
-
-    .payment-hero {
-        padding-top: 45px;
-    }
-
-    .payment-hero h1 {
-        font-size: 36px;
-    }
-
-    .instruction-list {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-links {
-        justify-content: flex-start;
-    }
-
+```
+.about-header {
+    padding: 18px 15px;
 }
 
+.about-header nav {
+    gap: 8px 12px;
+}
 
-/* =====================================================
-   RESPONSIVE — MOBILE
-===================================================== */
+.about-header nav a {
+    font-size: 12px;
+}
 
-@media (max-width: 600px) {
+.privacy-hero {
+    padding: 50px 15px 45px;
+}
 
-    .header-inner {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
+.privacy-hero h1 {
+    font-size: 32px;
+}
 
-    .logo {
-        font-size: 25px;
-    }
+.privacy-hero p {
+    font-size: 15px;
+}
 
-    .main-nav {
-        gap: 9px 15px;
-    }
+.privacy-container {
+    padding: 40px 18px 60px;
+}
 
-    .main-nav a {
-        font-size: 11px;
-    }
+.privacy-section h2 {
+    font-size: 22px;
+}
 
-    .payment-hero {
-        padding: 38px 18px 28px;
-    }
+.privacy-section p {
+    font-size: 14.5px;
+}
 
-    .payment-hero h1 {
-        font-size: 31px;
-    }
+.privacy-section li {
+    font-size: 14px;
+}
 
-    .payment-hero p {
-        font-size: 14px;
-    }
+.privacy-links {
+    padding: 22px 16px;
+}
 
-    .progress-container {
-        margin-bottom: 35px;
+.privacy-links h2 {
+    font-size: 21px;
+}
 
-        padding: 0 10px;
-    }
+.footer-content {
+    padding: 40px 18px;
+}
 
-    .progress-step {
-        gap: 5px;
-    }
+.footer-links {
+    flex-direction: column;
 
-    .progress-step span {
-        width: 29px;
-        height: 29px;
-
-        font-size: 11px;
-    }
-
-    .progress-step strong {
-        display: none;
-    }
-
-    .progress-line {
-        margin: 0 7px;
-    }
-
-    .payment-wrapper {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-    .order-card {
-        padding: 22px 18px;
-
-        border-radius: 15px;
-    }
-
-    .card-heading h2 {
-        font-size: 20px;
-    }
-
-    .order-row {
-        gap: 12px;
-    }
-
-    .order-row span,
-    .order-row strong {
-        font-size: 12px;
-    }
-
-    .total-row strong {
-        font-size: 22px;
-    }
-
-    .payment-card {
-        padding: 28px 18px;
-
-        border-radius: 16px;
-    }
-
-    .payment-card-header h2 {
-        font-size: 24px;
-    }
-
-    .payment-card-header p {
-        font-size: 13px;
-    }
-
-    .pay-button {
-        min-height: 58px;
-
-        font-size: 15px;
-    }
-
-    .instructions-card {
-        padding: 25px 18px;
-    }
-
-    .instructions-header h2 {
-        font-size: 23px;
-    }
-
-    .instruction {
-        padding: 16px;
-    }
-
-    .footer-content {
-        padding: 35px 20px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-
-        gap: 12px;
-    }
+    gap: 12px;
+}
+```
 
 }
