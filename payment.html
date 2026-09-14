@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Complete your CVexta.com resume payment securely.">
+          content="Complete your CVexta.com resume payment securely using Razorpay.">
 
-    <title>Payment | CVexta.com</title>
+    <title>Secure Payment | CVexta.com</title>
 
     <link rel="stylesheet" href="payment.css">
+
+    <!-- Razorpay Checkout -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
@@ -28,21 +31,13 @@
 
         <nav class="main-nav">
 
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
 
-            <a href="about.html">
-                About
-            </a>
+            <a href="about.html">About</a>
 
-            <a href="terms.html">
-                Terms &amp; Conditions
-            </a>
+            <a href="terms.html">Terms &amp; Conditions</a>
 
-            <a href="Privacy7Policy.html">
-                Privacy Policy
-            </a>
+            <a href="Privacy7Policy.html">Privacy Policy</a>
 
         </nav>
 
@@ -67,7 +62,7 @@
 
     <p>
         Your resume details have been saved.
-        Complete the payment below to continue.
+        Complete the secure payment to continue.
     </p>
 
 </section>
@@ -83,9 +78,7 @@
 
         <span>✓</span>
 
-        <strong>
-            Details
-        </strong>
+        <strong>Details</strong>
 
     </div>
 
@@ -97,9 +90,7 @@
 
         <span>2</span>
 
-        <strong>
-            Payment
-        </strong>
+        <strong>Payment</strong>
 
     </div>
 
@@ -111,9 +102,7 @@
 
         <span>3</span>
 
-        <strong>
-            WhatsApp
-        </strong>
+        <strong>WhatsApp</strong>
 
     </div>
 
@@ -145,6 +134,10 @@
                     Professional Resume
                 </h2>
 
+            </div>
+
+            <div class="order-badge">
+                SECURE
             </div>
 
         </div>
@@ -185,7 +178,7 @@
                 </span>
 
                 <strong id="amount">
-                    ₹499
+                    ₹0
                 </strong>
 
             </div>
@@ -195,208 +188,114 @@
     </section>
 
 
-
     <!-- =================================================
          PAYMENT CARD
     ================================================== -->
 
     <section class="payment-card">
 
-
         <div class="payment-card-header">
 
             <span class="small-label">
-                SECURE PAYMENT
+                SECURE CHECKOUT
             </span>
 
             <h2>
-                Pay using UPI
+                Pay Securely with Razorpay
             </h2>
 
             <p>
-                Scan the QR code or tap the button below
-                to open your UPI app.
+                Complete your payment using UPI, cards,
+                net banking or other available payment
+                methods.
             </p>
 
         </div>
 
 
-
         <!-- =================================================
-             QR CODE
-        ================================================== -->
-
-        <div class="qr-section">
-
-            <div class="qr-box">
-
-                <div
-                    class="qr-loading"
-                    id="qrLoading">
-
-                    Generating QR...
-
-                </div>
-
-                <img
-                    id="upiQr"
-                    src=""
-                    alt="CVexta UPI Payment QR Code">
-
-            </div>
-
-
-            <p class="scan-text">
-
-                Scan this QR code using
-                Google Pay, PhonePe, Paytm or your
-                bank's UPI application.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- =================================================
-             OR
-        ================================================== -->
-
-        <div class="or-divider">
-
-            <span>
-                OR
-            </span>
-
-        </div>
-
-
-
-        <!-- =================================================
-             UPI BUTTON
+             PAYMENT BUTTON
         ================================================== -->
 
         <button
             type="button"
-            id="payUpiButton"
-            class="upi-button">
+            id="payButton"
+            class="pay-button">
 
-            <span class="upi-icon">
+            <span class="pay-button-icon">
                 ₹
             </span>
 
-            <span id="upiButtonText">
-                Pay by UPI
+            <span id="payButtonText">
+                Pay Securely
             </span>
 
         </button>
 
 
-        <p class="upi-note">
+        <div class="payment-methods">
 
-            On mobile, this button will open a supported
-            UPI application. On desktop, scan the QR code
-            using your phone.
-
-        </p>
-
-
-
-        <!-- =================================================
-             INSTRUCTIONS
-        ================================================== -->
-
-        <div class="instructions">
-
-            <h3>
-                How to pay
-            </h3>
-
-
-            <div class="instruction">
-
-                <span>
-                    1
-                </span>
-
-                <p>
-                    Scan the QR code or tap
-                    <strong>Pay by UPI</strong>.
-                </p>
-
-            </div>
-
-
-            <div class="instruction">
-
-                <span>
-                    2
-                </span>
-
-                <p>
-                    Check the payee name and amount
-                    in your UPI application.
-                </p>
-
-            </div>
-
-
-            <div class="instruction">
-
-                <span>
-                    3
-                </span>
-
-                <p>
-                    Complete the payment using your
-                    UPI PIN.
-                </p>
-
-            </div>
-
-
-            <div class="instruction">
-
-                <span>
-                    4
-                </span>
-
-                <p>
-                    Return to this page after completing
-                    the payment.
-                </p>
-
-            </div>
+            <span>UPI</span>
+            <span>Cards</span>
+            <span>Net Banking</span>
+            <span>Wallets</span>
 
         </div>
 
 
-
         <!-- =================================================
-             PAYMENT COMPLETED
+             LOADING
         ================================================== -->
 
-        <div class="payment-confirmation">
+        <div
+            id="paymentLoading"
+            class="payment-loading">
 
-            <button
-                type="button"
-                id="paymentCompleted"
-                class="completed-button">
+            <div class="loading-spinner"></div>
 
-                ✓ Payment Completed — Continue
-
-            </button>
-
-
-            <p>
-
-                Only click this button after successfully
-                completing the UPI payment.
-
+            <p id="loadingText">
+                Preparing secure payment...
             </p>
 
         </div>
 
+
+        <!-- =================================================
+             SUCCESS
+        ================================================== -->
+
+        <div
+            id="paymentSuccess"
+            class="payment-success">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h3>
+                Payment Verified Successfully
+            </h3>
+
+            <p>
+                Your payment has been securely verified.
+                You can now continue to WhatsApp.
+            </p>
+
+            <button
+                type="button"
+                id="whatsappButton"
+                class="whatsapp-button">
+
+                Continue to WhatsApp
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             ERROR
+        ================================================== -->
 
         <div
             id="paymentError"
@@ -405,33 +304,144 @@
         </div>
 
 
+        <!-- =================================================
+             SECURITY NOTE
+        ================================================== -->
+
+        <div class="secure-note">
+
+            <div class="secure-icon">
+                🔒
+            </div>
+
+            <div>
+
+                <strong>
+                    Secure Payment
+                </strong>
+
+                <p>
+                    Your payment is securely processed
+                    through Razorpay. CVexta.com never
+                    asks for your UPI PIN, OTP or banking
+                    password.
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-
     <!-- =================================================
-         SECURITY
+         HOW IT WORKS
     ================================================== -->
 
-    <section class="security-box">
+    <section class="instructions-card">
 
-        <div class="security-icon">
-            🔒
+        <div class="instructions-header">
+
+            <span class="small-label">
+                SIMPLE &amp; SECURE
+            </span>
+
+            <h2>
+                How Payment Works
+            </h2>
+
         </div>
 
-        <div>
 
-            <h3>
-                Secure Payment
-            </h3>
+        <div class="instruction-list">
 
-            <p>
 
-                Your payment is handled by your selected
-                UPI application. CVexta.com never asks
-                for your UPI PIN, OTP or banking password.
+            <div class="instruction">
 
-            </p>
+                <div class="instruction-number">
+                    1
+                </div>
+
+                <div>
+
+                    <h3>
+                        Click Pay Securely
+                    </h3>
+
+                    <p>
+                        Click the payment button and
+                        Razorpay's secure checkout will open.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="instruction">
+
+                <div class="instruction-number">
+                    2
+                </div>
+
+                <div>
+
+                    <h3>
+                        Complete Payment
+                    </h3>
+
+                    <p>
+                        Choose UPI, card, net banking or
+                        another available payment method.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="instruction">
+
+                <div class="instruction-number">
+                    3
+                </div>
+
+                <div>
+
+                    <h3>
+                        Automatic Verification
+                    </h3>
+
+                    <p>
+                        CVexta securely verifies the
+                        Razorpay payment on the server.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="instruction">
+
+                <div class="instruction-number">
+                    4
+                </div>
+
+                <div>
+
+                    <h3>
+                        Continue to WhatsApp
+                    </h3>
+
+                    <p>
+                        WhatsApp becomes available only
+                        after successful payment verification.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -439,7 +449,6 @@
 
 
 </main>
-
 
 
 <!-- =====================================================
@@ -458,10 +467,8 @@
             </h2>
 
             <p>
-
                 Building better resumes today.<br>
                 Building better careers tomorrow.
-
             </p>
 
         </div>
@@ -514,24 +521,141 @@
 
 
     /* =====================================================
-       YOUR PAYMENT DETAILS
+       RAZORPAY CONFIGURATION
     ===================================================== */
-const RAZORPAY_KEY_ID = "rzp_test_Tby8E7JwjoqM3a";
+
+    /*
+     * IMPORTANT:
+     * This is your PUBLIC Razorpay TEST Key ID.
+     *
+     * NEVER put your Razorpay Key Secret here.
+     */
+
+    const RAZORPAY_KEY_ID =
+        "rzp_test_Tby8E7JwjoqM3a";
+
 
     const BUSINESS_NAME =
         "CVexta.com";
+
 
     const WHATSAPP_NUMBER =
         "917888450230";
 
 
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const resumeNameElement =
+        document.getElementById("resumeName");
+
+
+    const resumeTypeElement =
+        document.getElementById("resumeType");
+
+
+    const customerNameElement =
+        document.getElementById("customerName");
+
+
+    const amountElement =
+        document.getElementById("amount");
+
+
+    const payButton =
+        document.getElementById("payButton");
+
+
+    const payButtonText =
+        document.getElementById("payButtonText");
+
+
+    const paymentLoading =
+        document.getElementById("paymentLoading");
+
+
+    const loadingText =
+        document.getElementById("loadingText");
+
+
+    const paymentSuccess =
+        document.getElementById("paymentSuccess");
+
+
+    const whatsappButton =
+        document.getElementById("whatsappButton");
+
+
+    const paymentError =
+        document.getElementById("paymentError");
+
 
     /* =====================================================
-       GET ORDER FROM LOCAL STORAGE
+       HELPER: SHOW ERROR
+    ===================================================== */
+
+    function showError(message) {
+
+        paymentError.textContent =
+            message;
+
+        paymentError.classList.add(
+            "show"
+        );
+
+    }
+
+
+    /* =====================================================
+       HELPER: HIDE ERROR
+    ===================================================== */
+
+    function hideError() {
+
+        paymentError.textContent =
+            "";
+
+        paymentError.classList.remove(
+            "show"
+        );
+
+    }
+
+
+    /* =====================================================
+       HELPER: LOADING
+    ===================================================== */
+
+    function showLoading(message) {
+
+        loadingText.textContent =
+            message;
+
+        paymentLoading.classList.add(
+            "show"
+        );
+
+    }
+
+
+    function hideLoading() {
+
+        paymentLoading.classList.remove(
+            "show"
+        );
+
+    }
+
+
+    /* =====================================================
+       GET SAVED ORDER
     ===================================================== */
 
     const savedOrder =
-        localStorage.getItem("cvextaResumeOrder");
+        localStorage.getItem(
+            "cvextaResumeOrder"
+        );
 
 
     if (!savedOrder) {
@@ -548,17 +672,19 @@ const RAZORPAY_KEY_ID = "rzp_test_Tby8E7JwjoqM3a";
     }
 
 
-
     /* =====================================================
        PARSE ORDER
     ===================================================== */
 
     let order;
 
+
     try {
 
         order =
-            JSON.parse(savedOrder);
+            JSON.parse(
+                savedOrder
+            );
 
     }
 
@@ -574,7 +700,6 @@ const RAZORPAY_KEY_ID = "rzp_test_Tby8E7JwjoqM3a";
         return;
 
     }
-
 
 
     /* =====================================================
@@ -599,297 +724,313 @@ const RAZORPAY_KEY_ID = "rzp_test_Tby8E7JwjoqM3a";
         "Customer";
 
 
+    const customerEmail =
+        order.email ||
+        "";
+
+
+    const customerPhone =
+        order.phone ||
+        "";
+
 
     /* =====================================================
-       CHECK PRICE
+       VALIDATE PRICE
     ===================================================== */
 
-    if (!price || price <= 0) {
+    if (
+        !Number.isFinite(price) ||
+        price <= 0
+    ) {
 
-        document
-            .getElementById("paymentError")
-            .textContent =
-            "Unable to determine the payment amount. Please return to the resume details page and try again.";
+        showError(
+            "Unable to determine the payment amount. Please return to the resume details page and try again."
+        );
+
+        payButton.disabled =
+            true;
 
         return;
 
     }
 
 
-
     /* =====================================================
        DISPLAY ORDER
     ===================================================== */
 
-    document
-        .getElementById("resumeName")
-        .textContent =
+    resumeNameElement.textContent =
         resumeName;
 
 
-    document
-        .getElementById("resumeType")
-        .textContent =
+    resumeTypeElement.textContent =
         resumeName;
 
 
-    document
-        .getElementById("customerName")
-        .textContent =
+    customerNameElement.textContent =
         customerName;
 
 
-    document
-        .getElementById("amount")
-        .textContent =
-        "₹" + price;
+    amountElement.textContent =
+        "₹" +
+        price.toLocaleString(
+            "en-IN"
+        );
 
+
+    payButtonText.textContent =
+        "Pay ₹" +
+        price.toLocaleString(
+            "en-IN"
+        ) +
+        " Securely";
 
 
     /* =====================================================
-       CREATE ORDER ID
+       CHECK RAZORPAY SCRIPT
     ===================================================== */
 
-    let orderId =
-        localStorage.getItem(
-            "cvextaOrderId"
+    if (
+        typeof Razorpay ===
+        "undefined"
+    ) {
+
+        showError(
+            "Razorpay Checkout could not be loaded. Please refresh the page and try again."
         );
 
+        payButton.disabled =
+            true;
 
-    if (!orderId) {
-
-        orderId =
-            "CVX" +
-            Date.now();
-
-
-        localStorage.setItem(
-            "cvextaOrderId",
-            orderId
-        );
+        return;
 
     }
 
 
-
     /* =====================================================
-       CREATE UPI PAYMENT LINK
+       CREATE RAZORPAY ORDER
     ===================================================== */
 
-    const upiParams =
-        new URLSearchParams({
+    async function createRazorpayOrder() {
 
-            pa:
-                UPI_ID,
-
-            pn:
-                BUSINESS_NAME,
-
-            am:
-                price.toFixed(2),
-
-            cu:
-                "INR",
-
-            tr:
-                orderId,
-
-            tn:
-                "CVexta Resume - " +
-                orderId
-
-        });
+        const receipt =
+            "CVX-" +
+            Date.now();
 
 
-    const upiLink =
-        "upi://pay?" +
-        upiParams.toString();
+        const response =
+            await fetch(
+                "/.netlify/functions/create-order",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            amount:
+                                price,
+
+                            receipt:
+                                receipt,
+
+                            customerName:
+                                customerName,
+
+                            email:
+                                customerEmail,
+
+                            phone:
+                                customerPhone,
+
+                            resumeName:
+                                resumeName
+
+                        })
+                }
+            );
 
 
-
-    /* =====================================================
-       CREATE QR CODE
-    ===================================================== */
-
-    const qrImage =
-        document.getElementById(
-            "upiQr"
-        );
+        const data =
+            await response.json();
 
 
-    const qrLoading =
-        document.getElementById(
-            "qrLoading"
-        );
+        if (
+            !response.ok ||
+            !data.success
+        ) {
 
-
-    const qrUrl =
-        "https://api.qrserver.com/v1/create-qr-code/?" +
-        "size=320x320&margin=10&data=" +
-        encodeURIComponent(
-            upiLink
-        );
-
-
-    qrImage.onload =
-        function () {
-
-            qrLoading.style.display =
-                "none";
-
-            qrImage.style.display =
-                "block";
-
-        };
-
-
-    qrImage.onerror =
-        function () {
-
-            qrLoading.textContent =
-                "QR could not be loaded. Please use the UPI button.";
-
-        };
-
-
-    qrImage.src =
-        qrUrl;
-
-
-
-    /* =====================================================
-       UPI BUTTON
-    ===================================================== */
-
-    const payButton =
-        document.getElementById(
-            "payUpiButton"
-        );
-
-
-    const upiButtonText =
-        document.getElementById(
-            "upiButtonText"
-        );
-
-
-    upiButtonText.textContent =
-        "Pay ₹" +
-        price +
-        " by UPI";
-
-
-    payButton.addEventListener(
-        "click",
-        function () {
-
-            /*
-             * UPI deep links work primarily
-             * on mobile devices.
-             */
-
-            window.location.href =
-                upiLink;
+            throw new Error(
+                data.message ||
+                "Unable to create Razorpay order."
+            );
 
         }
-    );
 
+
+        return data;
+
+    }
 
 
     /* =====================================================
-       PAYMENT COMPLETED
+       VERIFY PAYMENT ON SERVER
     ===================================================== */
 
-    document
-        .getElementById(
-            "paymentCompleted"
-        )
-        .addEventListener(
-            "click",
-            function () {
+    async function verifyPayment(
+        response
+    ) {
+
+        const verificationResponse =
+            await fetch(
+                "/.netlify/functions/verify-payment",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            razorpay_order_id:
+                                response.razorpay_order_id,
+
+                            razorpay_payment_id:
+                                response.razorpay_payment_id,
+
+                            razorpay_signature:
+                                response.razorpay_signature,
+
+                            expected_amount:
+                                price
+
+                        })
+                }
+            );
 
 
-                const latestOrder =
-                    JSON.parse(
-                        localStorage.getItem(
-                            "cvextaResumeOrder"
-                        )
-                    ) || {};
+        const verificationData =
+            await verificationResponse.json();
 
 
+        if (
+            !verificationResponse.ok ||
+            !verificationData.success
+        ) {
 
-                /* -----------------------------------------
-                   SAVE PAYMENT STATUS
-                ----------------------------------------- */
+            throw new Error(
+                verificationData.message ||
+                "Payment verification failed."
+            );
 
-                localStorage.setItem(
-                    "cvextaPaymentStatus",
-                    "customer_confirmed"
-                );
-
-
-                localStorage.setItem(
-                    "cvextaPaymentOrderId",
-                    orderId
-                );
+        }
 
 
+        return verificationData;
 
-                /* -----------------------------------------
-                   WHATSAPP MESSAGE
-                ----------------------------------------- */
+    }
 
-                const messageText =
+
+    /* =====================================================
+       OPEN WHATSAPP AFTER VERIFIED PAYMENT
+    ===================================================== */
+
+    function openWhatsApp(
+        verificationData
+    ) {
+
+        const latestOrder =
+            JSON.parse(
+                localStorage.getItem(
+                    "cvextaResumeOrder"
+                )
+            ) || {};
+
+
+        const verifiedAmount =
+            verificationData.amount ||
+            price;
+
+
+        const verifiedOrderId =
+            verificationData.order_id ||
+            "Not provided";
+
+
+        const verifiedPaymentId =
+            verificationData.payment_id ||
+            "Not provided";
+
+
+        const messageText =
 
 `*CVexta.com – Resume Order*
 
 *ORDER DETAILS*
 
-Resume Type: ${
+Resume Type:
+${
     latestOrder.resumeName ||
     "Not provided"
 }
 
-Amount: ₹${
-    latestOrder.price ||
-    latestOrder.amount ||
-    "Not provided"
-}
+Amount Paid:
+₹${verifiedAmount}
 
-Customer Name: ${
+Customer Name:
+${
     latestOrder.fullName ||
     "Not provided"
 }
+
+Order ID:
+${verifiedOrderId}
+
+Payment ID:
+${verifiedPaymentId}
 
 
 *PERSONAL INFORMATION*
 
-Full Name: ${
+Full Name:
+${
     latestOrder.fullName ||
     "Not provided"
 }
 
-Professional Title: ${
+Professional Title:
+${
     latestOrder.professionalTitle ||
     "Not provided"
 }
 
-Email: ${
+Email:
+${
     latestOrder.email ||
     "Not provided"
 }
 
-Phone: ${
+Phone:
+${
     latestOrder.phone ||
     "Not provided"
 }
 
-Location: ${
+Location:
+${
     latestOrder.location ||
     "Not provided"
 }
 
-LinkedIn: ${
+LinkedIn:
+${
     latestOrder.linkedin ||
     "Not provided"
 }
@@ -961,40 +1102,391 @@ ${
 
 *PAYMENT STATUS*
 
-Customer has confirmed payment.
+Payment verified successfully by CVexta.com.
+
+
+*PAYMENT ID*
+
+${verifiedPaymentId}
 
 
 *ORDER ID*
 
-${orderId}
+${verifiedOrderId}
 
 
-Thank you.`;
+Thank you for choosing CVexta.com.`;
 
 
+        const whatsappUrl =
+            "https://wa.me/" +
+            WHATSAPP_NUMBER +
+            "?text=" +
+            encodeURIComponent(
+                messageText
+            );
 
-                /* -----------------------------------------
-                   WHATSAPP URL
-                ----------------------------------------- */
 
-                const whatsappUrl =
+        window.location.href =
+            whatsappUrl;
 
-                    "https://wa.me/" +
+    }
 
-                    WHATSAPP_NUMBER +
 
-                    "?text=" +
+    /* =====================================================
+       RAZORPAY CHECKOUT
+    ===================================================== */
 
-                    encodeURIComponent(
-                        messageText
+    async function startPayment() {
+
+        hideError();
+
+
+        payButton.disabled =
+            true;
+
+
+        payButtonText.textContent =
+            "Preparing Payment...";
+
+
+        try {
+
+            /* ---------------------------------------------
+               CREATE SERVER-SIDE RAZORPAY ORDER
+            --------------------------------------------- */
+
+            showLoading(
+                "Creating your secure payment order..."
+            );
+
+
+            const razorpayOrder =
+                await createRazorpayOrder();
+
+
+            hideLoading();
+
+
+            /* ---------------------------------------------
+               RAZORPAY CHECKOUT OPTIONS
+            --------------------------------------------- */
+
+            const options = {
+
+                key:
+                    RAZORPAY_KEY_ID,
+
+                amount:
+                    razorpayOrder.amount,
+
+                currency:
+                    razorpayOrder.currency ||
+                    "INR",
+
+                name:
+                    BUSINESS_NAME,
+
+                description:
+                    resumeName,
+
+                order_id:
+                    razorpayOrder.order_id,
+
+
+                prefill: {
+
+                    name:
+                        customerName,
+
+                    email:
+                        customerEmail,
+
+                    contact:
+                        customerPhone
+
+                },
+
+
+                notes: {
+
+                    resume:
+                        resumeName
+
+                },
+
+
+                theme: {
+
+                    color:
+                        "#2563eb"
+
+                },
+
+
+                modal: {
+
+                    ondismiss:
+                        function () {
+
+                            payButton.disabled =
+                                false;
+
+                            payButtonText.textContent =
+                                "Pay ₹" +
+                                price.toLocaleString(
+                                    "en-IN"
+                                ) +
+                                " Securely";
+
+                        }
+
+                },
+
+
+                handler:
+                    async function (
+                        razorpayResponse
+                    ) {
+
+                        try {
+
+                            /* ---------------------------------
+                               PAYMENT RECEIVED
+                            --------------------------------- */
+
+                            showLoading(
+                                "Payment received. Verifying securely..."
+                            );
+
+
+                            /* ---------------------------------
+                               SERVER VERIFICATION
+                            --------------------------------- */
+
+                            const verification =
+                                await verifyPayment(
+                                    razorpayResponse
+                                );
+
+
+                            hideLoading();
+
+
+                            /* ---------------------------------
+                               SAVE VERIFIED PAYMENT
+                            --------------------------------- */
+
+                            localStorage.setItem(
+                                "cvextaPaymentStatus",
+                                "verified"
+                            );
+
+
+                            localStorage.setItem(
+                                "cvextaPaymentOrderId",
+                                verification.order_id
+                            );
+
+
+                            localStorage.setItem(
+                                "cvextaPaymentId",
+                                verification.payment_id
+                            );
+
+
+                            localStorage.setItem(
+                                "cvextaPaymentVerifiedAt",
+                                new Date().toISOString()
+                            );
+
+
+                            /* ---------------------------------
+                               SHOW SUCCESS
+                            --------------------------------- */
+
+                            paymentSuccess.classList.add(
+                                "show"
+                            );
+
+
+                            payButton.style.display =
+                                "none";
+
+
+                        }
+
+                        catch (error) {
+
+                            hideLoading();
+
+
+                            showError(
+                                error.message ||
+                                "Payment verification failed. Please contact CVexta.com before making another payment."
+                            );
+
+
+                            payButton.disabled =
+                                false;
+
+
+                            payButtonText.textContent =
+                                "Try Payment Again";
+
+                        }
+
+                    }
+
+            };
+
+
+            /* ---------------------------------------------
+               OPEN RAZORPAY
+            --------------------------------------------- */
+
+            const razorpay =
+                new Razorpay(
+                    options
+                );
+
+
+            razorpay.on(
+                "payment.failed",
+                function (
+                   response
+                ) {
+
+                    hideLoading();
+
+
+                    const reason =
+                        response.error &&
+                        response.error.description
+                            ? response.error.description
+                            : "Payment failed. Please try again.";
+
+
+                    showError(
+                        reason
                     );
 
 
-                window.location.href =
-                    whatsappUrl;
+                    payButton.disabled =
+                        false;
+
+
+                    payButtonText.textContent =
+                        "Try Payment Again";
+
+                }
+            );
+
+
+            razorpay.open();
+
+        }
+
+        catch (error) {
+
+            hideLoading();
+
+
+            showError(
+                error.message ||
+                "Unable to start payment. Please try again."
+            );
+
+
+            payButton.disabled =
+                false;
+
+
+            payButtonText.textContent =
+                "Try Payment Again";
+
+        }
+
+    }
+
+
+    /* =====================================================
+       PAYMENT BUTTON CLICK
+    ===================================================== */
+
+    payButton.addEventListener(
+        "click",
+        startPayment
+    );
+
+
+    /* =====================================================
+       WHATSAPP BUTTON
+    ===================================================== */
+
+    whatsappButton.addEventListener(
+        "click",
+        function () {
+
+            /*
+             * Extra protection:
+             * WhatsApp can only be opened if our
+             * local payment status is verified.
+             */
+
+            const paymentStatus =
+                localStorage.getItem(
+                    "cvextaPaymentStatus"
+                );
+
+
+            const paymentId =
+                localStorage.getItem(
+                    "cvextaPaymentId"
+                );
+
+
+            const verifiedOrderId =
+                localStorage.getItem(
+                    "cvextaPaymentOrderId"
+                );
+
+
+            if (
+                paymentStatus !==
+                "verified" ||
+                !paymentId ||
+                !verifiedOrderId
+            ) {
+
+                showError(
+                    "Payment verification is required before continuing to WhatsApp."
+                );
+
+                return;
 
             }
-        );
+
+
+            /*
+             * Use saved verified information.
+             */
+
+            openWhatsApp({
+
+                amount:
+                    price,
+
+                order_id:
+                    verifiedOrderId,
+
+                payment_id:
+                    paymentId
+
+            });
+
+        }
+    );
 
 
 })();
