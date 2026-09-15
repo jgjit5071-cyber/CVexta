@@ -591,7 +591,7 @@ body {
 
     /* HEADER */
 
-    .About-header {
+    .about-header {
         min-height: auto;
 
         padding: 20px;
@@ -601,11 +601,11 @@ body {
         gap: 18px;
     }
 
-    .About-header .logo a {
+    .about-header .logo a {
         font-size: 26px;
     }
 
-    .About-header nav {
+    .about-header nav {
         width: 100%;
 
         display: flex;
@@ -617,7 +617,7 @@ body {
         gap: 10px 16px;
     }
 
-    .About-header nav a {
+    .about-header nav a {
         font-size: 13px;
     }
 
@@ -733,15 +733,15 @@ body {
 
 @media (max-width: 480px) {
 
-    .About-header {
+    .about-header {
         padding: 18px 15px;
     }
 
-    .About-header nav {
+    .about-header nav {
         gap: 8px 12px;
     }
 
-    .About-header nav a {
+    .about-header nav a {
         font-size: 12px;
     }
 
