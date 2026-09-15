@@ -1,3 +1,7 @@
+```css
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
     margin: 0;
@@ -10,28 +14,30 @@ html {
 }
 
 body {
-    margin: 0;
-
     font-family: Georgia, "Times New Roman", serif;
-
     background: #ffffff;
-
     color: #243b53;
-
     line-height: 1.7;
 }
 
+button,
+a {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
 .about-header {
     width: 100%;
-
     min-height: 78px;
 
     padding: 0 6%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     background: #ffffff;
@@ -39,20 +45,20 @@ body {
     border-bottom: 1px solid #e5e7eb;
 
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
 }
+
+
+/* LOGO */
 
 .about-header .logo a {
     text-decoration: none;
 
-    color: #243b53;
-
     font-size: 28px;
-
     font-weight: 700;
+
+    color: #243b53;
 
     letter-spacing: -0.5px;
 
@@ -63,11 +69,13 @@ body {
     color: #2563eb;
 }
 
+
+/* NAVIGATION */
+
 .about-header nav {
     display: flex;
 
     align-items: center;
-
     justify-content: flex-end;
 
     gap: 24px;
@@ -83,7 +91,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     font-size: 14px;
-
     font-weight: 600;
 
     padding: 8px 0;
@@ -97,20 +104,15 @@ body {
     color: #2563eb;
 }
 
-
-/* Navigation underline */
-
 .about-header nav a::after {
     content: "";
 
     position: absolute;
 
     left: 0;
-
     bottom: 0;
 
     width: 0;
-
     height: 2px;
 
     background: #2563eb;
@@ -122,12 +124,15 @@ body {
     width: 100%;
 }
 
-.about-hero {
-    width: 100%;
 
+/* =====================================================
+   ABOUT HERO
+===================================================== */
+
+.about-hero {
     text-align: center;
 
-    padding: 100px 20px 90px;
+    padding: 90px 20px 75px;
 
     background: #ffffff;
 
@@ -135,17 +140,17 @@ body {
 }
 
 .about-hero h1 {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 
-    font-size: 52px;
+    font-size: 48px;
 
     line-height: 1.2;
 
     font-weight: 700;
 
-    letter-spacing: -1.2px;
-
     color: #243b53;
+
+    letter-spacing: -1px;
 }
 
 .about-hero p {
@@ -155,25 +160,340 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 19px;
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #52606d;
+}
+
+
+/* =====================================================
+   GENERAL ABOUT SECTIONS
+===================================================== */
+
+.about-section {
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 70px 30px 20px;
+}
+
+.about-section h2 {
+    margin-bottom: 15px;
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    color: #243b53;
+}
+
+.about-section p {
+    margin-bottom: 14px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15.5px;
+
+    line-height: 1.8;
+
+    color: #52606d;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.Service-Card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(36, 59, 83, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+.Service-Card:hover {
+    transform: translateY(-4px);
+
+    border-color: #dbe4f0;
+
+    box-shadow: 0 10px 30px rgba(36, 59, 83, 0.10);
+}
+
+.Service-Card h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    color: #243b53;
+}
+
+.Service-Card p {
+    margin-bottom: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14.5px;
 
     line-height: 1.7;
 
     color: #52606d;
 }
 
-.about-section {
+
+/* =====================================================
+   MISSION SECTION
+===================================================== */
+
+.mission-section {
     max-width: 950px;
 
-    margin: 0 auto;
+    margin: 50px auto 0;
 
-    padding: 75px 30px;
+    padding: 55px 50px;
+
+    background: #f5f7fb;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 8px;
 }
 
-.about-section h2 {
-    margin-bottom: 20px;
+.mission-section h2 {
+    margin-bottom: 15px;
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    color: #243b53;
+}
+
+.mission-section p {
+    margin-bottom: 14px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15.5px;
+
+    line-height: 1.8;
+
+    color: #52606d;
+}
+
+.mission-section strong {
+    display: block;
+
+    margin-top: 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #243b53;
+}
+
+
+/* =====================================================
+   FUTURE SERVICES SECTION
+===================================================== */
+
+.future-section {
+    max-width: 950px;
+
+    margin: 50px auto 0;
+
+    padding: 70px 30px 30px;
+}
+
+.future-section > h2 {
+    margin-bottom: 15px;
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    color: #243b53;
+}
+
+.future-section > p {
+    margin-bottom: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15.5px;
+
+    line-height: 1.8;
+
+    color: #52606d;
+}
+
+
+/*
+   This styling handles the individual
+   service blocks currently used inside
+   your future-section HTML.
+*/
+
+.future-services {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+
+    margin-bottom: 24px;
+}
+
+.future-services > div,
+.future-section > div:not(.future-services) {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(36, 59, 83, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+.future-services > div:hover,
+.future-section > div:not(.future-services):hover {
+    transform: translateY(-4px);
+
+    border-color: #dbe4f0;
+
+    box-shadow: 0 10px 30px rgba(36, 59, 83, 0.09);
+}
+
+.future-section h3 {
+    margin-bottom: 9px;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    color: #243b53;
+}
+
+.future-section div p {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14.5px;
+
+    line-height: 1.7;
+
+    color: #52606d;
+}
+
+
+/* =====================================================
+   PROMISE SECTION
+===================================================== */
+
+.promise-section {
+    max-width: 950px;
+
+    margin: 50px auto 0;
+
+    padding: 55px 30px;
 
     text-align: center;
+
+    background: #f5f7fb;
+
+    border-top: 1px solid #e5e7eb;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.promise-section h2 {
+    margin-bottom: 15px;
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    color: #243b53;
+}
+
+.promise-section p {
+    max-width: 750px;
+
+    margin: 0 auto 15px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15.5px;
+
+    line-height: 1.8;
+
+    color: #52606d;
+}
+
+.promise-section p:last-child {
+    margin-bottom: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #243b53;
+}
+
+
+/* =====================================================
+   CALL TO ACTION
+===================================================== */
+
+.about-CTA {
+    text-align: center;
+
+    padding: 80px 25px 90px;
+
+    background: #ffffff;
+}
+
+.about-CTA h2 {
+    margin-bottom: 15px;
 
     font-size: 32px;
 
@@ -182,296 +502,24 @@ body {
     color: #243b53;
 }
 
-.about-section > p {
-    margin-bottom: 18px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 16px;
-
-    line-height: 1.85;
-
-    color: #52606d;
-}
-
-.services {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-
-    margin-top: 40px;
-}
-
-.Service-Card {
-    padding: 32px;
-
-    background: #f8fafc;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 10px;
-
-    transition: all 0.3s ease;
-}
-
-.Service-Card:hover {
-    transform: translateY(-5px);
-
-    border-color: #cbd5e1;
-
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-
-.Service-Card h3 {
-    margin-bottom: 12px;
-
-    font-size: 21px;
-
-    color: #243b53;
-}
-
-.Service-Card p {
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 15px;
-
-    line-height: 1.75;
-
-    color: #52606d;
-}
-
-.mission-section {
-    padding: 85px 30px;
-
-    text-align: center;
-
-    background: #f8fafc;
-
-    border-top: 1px solid #e5e7eb;
-
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.mission-section h2 {
-    margin-bottom: 22px;
-
-    font-size: 34px;
-
-    color: #243b53;
-}
-
-.mission-section p {
-    max-width: 850px;
-
-    margin: 0 auto 18px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 16px;
-
-    line-height: 1.85;
-
-    color: #52606d;
-}
-
-.mission-section strong {
-    display: block;
-
-    max-width: 800px;
-
-    margin: 30px auto 0;
-
-    font-size: 19px;
-
-    line-height: 1.6;
-
-    color: #243b53;
-}
-
-.about-section:nth-of-type(4) {
-    text-align: center;
-}
-
-.about-section:nth-of-type(4) p {
-    max-width: 850px;
-
-    margin-left: auto;
-
-    margin-right: auto;
-}
-
-.future-section {
-    padding: 90px 30px;
-
-    background: #f8fafc;
-
-    text-align: center;
-
-    border-top: 1px solid #e5e7eb;
-
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.future-section > h2 {
-    margin-bottom: 18px;
-
-    font-size: 34px;
-
-    color: #243b53;
-}
-
-.future-section > p {
-    max-width: 750px;
-
-    margin: 0 auto 45px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 16px;
-
-    line-height: 1.8;
-
-    color: #52606d;
-}
-
-.future-services {
-    max-width: 1050px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.future-services > div {
-    padding: 30px 22px;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 10px;
-
-    text-align: left;
-
-    transition: all 0.3s ease;
-}
-
-.future-services > div:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-
-    border-color: #cbd5e1;
-}
-
-.future-services h3 {
-    margin-bottom: 12px;
-
-    font-size: 17px;
-
-    color: #243b53;
-}
-
-.future-services p {
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-
-    color: #52606d;
-}
-
-.promise-section {
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 85px 30px;
-
-    text-align: center;
-}
-
-.promise-section h2 {
-    margin-bottom: 20px;
-
-    font-size: 34px;
-
-    color: #243b53;
-}
-
-.promise-section p {
-    max-width: 800px;
-
-    margin: 0 auto 20px;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 16px;
-
-    line-height: 1.85;
-
-    color: #52606d;
-}
-
-.promise-section p:last-child {
-    margin-top: 30px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 22px;
-
-    font-weight: 700;
-
-    line-height: 1.5;
-
-    color: #243b53;
-}
-
-.about-CTA {
-    padding: 90px 25px;
-
-    text-align: center;
-
-    background: #243b53;
-
-    color: #ffffff;
-}
-
-.about-CTA h2 {
-    margin-bottom: 18px;
-
-    font-size: 36px;
-
-    line-height: 1.3;
-
-    color: #ffffff;
-}
-
 .about-CTA p {
-    max-width: 700px;
+    max-width: 650px;
 
-    margin: 0 auto 30px;
+    margin: 0 auto 28px;
 
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 16px;
+    font-size: 15.5px;
 
     line-height: 1.8;
 
-    color: #d9e2ec;
+    color: #52606d;
 }
 
 .cta-button {
     display: inline-block;
 
-    padding: 14px 30px;
+    padding: 12px 24px;
 
     background: #2563eb;
 
@@ -479,13 +527,13 @@ body {
 
     text-decoration: none;
 
-    border-radius: 7px;
+    border-radius: 6px;
 
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 15px;
+    font-size: 14px;
 
-    font-weight: 700;
+    font-weight: 600;
 
     transition: all 0.3s ease;
 }
@@ -493,36 +541,67 @@ body {
 .cta-button:hover {
     background: #1d4ed8;
 
-    transform: translateY(-2px);
-
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+    transform: translateY(-1px);
 }
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .site-footer {
     background: #111827;
 
     color: #ffffff;
+
+    margin-top: 20px;
+
+    text-align: center;
 }
+
+
+/* FOOTER MAIN AREA */
 
 .footer-content {
     max-width: 1100px;
 
     margin: 0 auto;
 
-    padding: 50px 30px;
+    padding: 55px 30px;
 
     display: flex;
 
-    align-items: center;
-
     justify-content: space-between;
 
-    gap: 40px;
+    align-items: flex-start;
+
+    gap: 50px;
 }
 
 .footer-brand {
-    flex: 1;
+    max-width: 400px;
 }
+
+.footer-brand h2 {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+
+    color: #ffffff;
+}
+
+.footer-brand p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #9ca3af;
+}
+
+
+/* FOOTER LINKS */
 
 .footer-links {
     display: flex;
@@ -531,7 +610,7 @@ body {
 
     justify-content: flex-end;
 
-    gap: 12px 24px;
+    gap: 12px 25px;
 }
 
 .footer-links a {
@@ -550,14 +629,17 @@ body {
     color: #ffffff;
 }
 
-.site-footer > p {
-    margin: 0;
 
-    padding: 20px;
+/* COPYRIGHT */
+
+.site-footer > p {
+    border-top: 1px solid #374151;
 
     text-align: center;
 
-    border-top: 1px solid #374151;
+    padding: 20px;
+
+    margin: 0;
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -566,26 +648,44 @@ body {
     color: #9ca3af;
 }
 
+
+/* =====================================================
+   TABLET
+===================================================== */
+
 @media (max-width: 900px) {
 
-    .About-header {
+    .about-header {
         padding: 0 4%;
     }
 
-    .About-header nav {
+    .about-header nav {
         gap: 15px;
     }
 
-    .About-header nav a {
+    .about-header nav a {
         font-size: 13px;
     }
 
+    .about-section,
+    .future-section {
+        max-width: 850px;
 
-    .future-services {
-        grid-template-columns: repeat(2, 1fr);
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
+    .mission-section,
+    .promise-section {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 768px) {
 
@@ -601,9 +701,15 @@ body {
         gap: 18px;
     }
 
+
+    /* LOGO */
+
     .about-header .logo a {
         font-size: 26px;
     }
+
+
+    /* NAVIGATION */
 
     .about-header nav {
         width: 100%;
@@ -621,93 +727,131 @@ body {
         font-size: 13px;
     }
 
+
+    /* HERO */
+
     .about-hero {
-        padding: 70px 20px 60px;
+        padding: 65px 20px 55px;
     }
 
     .about-hero h1 {
-        font-size: 40px;
+        font-size: 38px;
+
+        letter-spacing: -0.5px;
     }
 
     .about-hero p {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+
+    /* GENERAL CONTENT */
+
+    .about-section,
+    .future-section {
+        padding: 50px 20px 25px;
     }
 
     .about-section {
-        padding: 60px 20px;
+        max-width: 100%;
     }
 
-    .about-section h2 {
-        font-size: 29px;
+    .about-section h2,
+    .future-section > h2 {
+        font-size: 24px;
+
+        margin-bottom: 12px;
     }
 
-    .about-section > p {
+    .about-section p,
+    .future-section > p {
         font-size: 15px;
+
+        line-height: 1.75;
     }
+
+
+    /* SERVICES */
 
     .services {
         grid-template-columns: 1fr;
 
-        gap: 20px;
+        gap: 18px;
 
-        margin-top: 30px;
+        margin-top: 25px;
     }
 
+    .Service-Card {
+        padding: 25px;
+    }
+
+
+    /* MISSION */
+
     .mission-section {
-        padding: 65px 20px;
+        margin: 35px 20px 0;
+
+        padding: 40px 25px;
+
+        border-left-width: 3px;
     }
 
     .mission-section h2 {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .mission-section p {
         font-size: 15px;
-    }
 
-    .mission-section strong {
-        font-size: 18px;
+        line-height: 1.75;
     }
 
 
-    .future-section {
-        padding: 65px 20px;
-    }
-
-    .future-section > h2 {
-        font-size: 30px;
-    }
-
-    .future-section > p {
-        font-size: 15px;
-    }
+    /* FUTURE SERVICES */
 
     .future-services {
         grid-template-columns: 1fr;
+
+        gap: 18px;
     }
 
+    .future-services > div,
+    .future-section > div:not(.future-services) {
+        padding: 24px;
+    }
+
+
+    /* PROMISE */
+
     .promise-section {
-        padding: 65px 20px;
+        margin: 35px 20px 0;
+
+        padding: 45px 20px;
     }
 
     .promise-section h2 {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .promise-section p {
         font-size: 15px;
+
+        line-height: 1.75;
     }
 
     .promise-section p:last-child {
-        font-size: 20px;
+        font-size: 17px;
     }
 
+
+    /* CTA */
+
     .about-CTA {
-        padding: 70px 20px;
+        padding: 60px 20px 70px;
     }
 
     .about-CTA h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .about-CTA p {
@@ -718,18 +862,32 @@ body {
     /* FOOTER */
 
     .footer-content {
-        padding: 40px 20px;
+        padding: 45px 25px;
 
         flex-direction: column;
 
         text-align: center;
+
+        align-items: center;
+
+        gap: 30px;
+    }
+
+    .footer-brand {
+        max-width: 500px;
     }
 
     .footer-links {
         justify-content: center;
-    }
 
+        gap: 12px 20px;
+    }
 }
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
 @media (max-width: 480px) {
 
@@ -745,76 +903,121 @@ body {
         font-size: 12px;
     }
 
+
+    /* HERO */
+
     .about-hero {
-        padding: 55px 15px 50px;
+        padding: 50px 15px 45px;
     }
 
     .about-hero h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .about-hero p {
         font-size: 15px;
     }
 
-    .about-section {
-        padding: 50px 18px;
+
+    /* CONTENT */
+
+    .about-section,
+    .future-section {
+        padding: 40px 18px 20px;
     }
 
-    .about-section h2 {
-        font-size: 26px;
+    .about-section h2,
+    .future-section > h2 {
+        font-size: 22px;
     }
 
-    .Service-Card {
-        padding: 25px 20px;
+    .about-section p,
+    .future-section > p {
+        font-size: 14.5px;
     }
+
+
+    /* CARDS */
+
+    .Service-Card,
+    .future-services > div,
+    .future-section > div:not(.future-services) {
+        padding: 22px;
+    }
+
+    .Service-Card h3,
+    .future-section h3 {
+        font-size: 18px;
+    }
+
+
+    /* MISSION */
 
     .mission-section {
-        padding: 55px 18px;
+        margin: 30px 18px 0;
+
+        padding: 35px 20px;
     }
 
     .mission-section h2 {
-        font-size: 27px;
+        font-size: 22px;
     }
 
-    .future-section {
-        padding: 55px 18px;
+    .mission-section p {
+        font-size: 14.5px;
     }
 
-    .future-section > h2 {
-        font-size: 27px;
+    .mission-section strong {
+        font-size: 16px;
     }
 
-    .future-services > div {
-        padding: 25px 20px;
-    }
+
+    /* PROMISE */
 
     .promise-section {
-        padding: 55px 18px;
+        margin: 30px 18px 0;
+
+        padding: 40px 18px;
     }
 
     .promise-section h2 {
-        font-size: 27px;
+        font-size: 22px;
+    }
+
+    .promise-section p {
+        font-size: 14.5px;
     }
 
     .promise-section p:last-child {
-        font-size: 19px;
+        font-size: 16px;
     }
 
+
+    /* CTA */
+
     .about-CTA {
-        padding: 60px 18px;
+        padding: 50px 18px 60px;
     }
 
     .about-CTA h2 {
-        font-size: 27px;
+        font-size: 25px;
+    }
+
+    .about-CTA p {
+        font-size: 14.5px;
     }
 
     .cta-button {
-        padding: 13px 24px;
+        padding: 11px 20px;
+
+        font-size: 13.5px;
     }
 
+
+    /* FOOTER */
+
     .footer-content {
-        padding: 35px 18px;
+        padding: 40px 18px;
     }
 
     .footer-links {
@@ -823,4 +1026,10 @@ body {
         gap: 12px;
     }
 
+    .site-footer > p {
+        padding: 18px 12px;
+
+        font-size: 12px;
+    }
 }
+```
