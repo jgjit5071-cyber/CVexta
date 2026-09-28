@@ -1,1 +1,1808 @@
+/* =========================================================
+   CVEXTA.COM
+   MAIN CSS
+========================================================= */
 
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 5%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8e8e8;
+
+    position: relative;
+    z-index: 20;
+}
+
+
+.logo a {
+    font-size: 28px;
+    font-weight: 700;
+    color: #172033;
+    letter-spacing: -0.5px;
+}
+
+
+.main-header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.main-header nav a {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #303846;
+
+    transition: color 0.25s ease;
+}
+
+
+.main-header nav a:hover {
+    color: #b07a35;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-hero {
+    min-height: 620px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(16, 28, 47, 0.88),
+            rgba(16, 28, 47, 0.88)
+        ),
+        linear-gradient(
+            135deg,
+            #172033,
+            #32445e
+        );
+}
+
+
+.hero-overlay {
+    width: 100%;
+}
+
+
+.hero-content {
+    width: 90%;
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+
+.hero-small-text {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d5a45c;
+}
+
+
+.hero-content h1 {
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-content h1 span {
+    display: block;
+    color: #d5a45c;
+}
+
+
+.hero-content p {
+    max-width: 680px;
+
+    margin: 0 auto 35px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #e1e6ed;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.primary-button,
+.secondary-button,
+.cta-button,
+.resume-button {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.primary-button {
+    padding: 14px 27px;
+
+    background: #d5a45c;
+
+    color: #182235;
+
+    font-size: 14px;
+}
+
+
+.primary-button:hover {
+    transform: translateY(-2px);
+
+    background: #e2b873;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+}
+
+
+.secondary-button {
+    padding: 13px 27px;
+
+    border: 1px solid rgba(255,255,255,0.6);
+
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+
+.secondary-button:hover {
+    background: #ffffff;
+    color: #172033;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section-heading {
+    width: 90%;
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.section-heading > span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #b07a35;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 46px);
+
+    line-height: 1.2;
+
+    color: #172033;
+
+    margin-bottom: 15px;
+}
+
+
+.section-heading p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   WHY SECTION
+========================================================= */
+
+.why-section {
+    padding: 95px 5%;
+
+    background: #ffffff;
+}
+
+
+.benefits {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.benefit-card {
+    padding: 32px 26px;
+
+    background: #f8f9fb;
+
+    border: 1px solid #e7e9ed;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(23,32,51,0.08);
+}
+
+
+.benefit-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    background: #172033;
+
+    color: #d5a45c;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.benefit-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+
+    color: #172033;
+}
+
+
+.benefit-card p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESUME SECTION
+========================================================= */
+
+.resume-section {
+    padding: 95px 5%;
+
+    background: #f6f7f9;
+}
+
+
+.resume-grid {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   RESUME CARD
+========================================================= */
+
+.resume-card {
+    background: #ffffff;
+
+    border: 1px solid #e1e4e8;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.resume-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(20,30,45,0.12);
+}
+
+
+/* =========================================================
+   RESUME PREVIEW AREA
+========================================================= */
+
+.resume-preview {
+    width: 100%;
+
+    height: 250px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f3f5f7;
+}
+
+
+.mini-resume {
+    width: 78%;
+
+    height: 215px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12);
+
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.resume-card:hover .mini-resume {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 32px rgba(0,0,0,0.17);
+}
+
+
+/* =========================================================
+   MINI RESUME COMMON
+========================================================= */
+
+.mini-name {
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+}
+
+
+.mini-role {
+    font-size: 6px;
+
+    margin-top: 3px;
+
+    opacity: 0.75;
+}
+
+
+.mini-section {
+    font-size: 6px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 5px;
+}
+
+
+.mini-line {
+    height: 3px;
+
+    background: #d9dee4;
+
+    margin: 3px 0;
+
+    border-radius: 3px;
+}
+
+
+.mini-line.short {
+    width: 50%;
+}
+
+
+.mini-line.medium {
+    width: 72%;
+}
+
+
+.mini-line.long {
+    width: 92%;
+}
+
+
+/* =========================================================
+   PROFESSIONAL PREVIEW
+========================================================= */
+
+.preview-professional {
+    background: #edf1f5;
+}
+
+
+.professional-resume {
+    border-top: 7px solid #203a57;
+
+    padding: 13px 15px;
+}
+
+
+.professional-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 13px;
+}
+
+
+.professional-name {
+    color: #203a57;
+}
+
+
+.professional-contact {
+    text-align: right;
+
+    font-size: 5px;
+
+    line-height: 1.6;
+
+    color: #667085;
+}
+
+
+.professional-body {
+    display: grid;
+
+    grid-template-columns:
+        1.6fr 1fr;
+
+    gap: 14px;
+}
+
+
+.professional-section {
+    color: #203a57;
+
+    border-bottom:
+        1px solid #ccd5df;
+
+    padding-bottom: 3px;
+
+    margin-bottom: 5px;
+}
+
+
+.professional-job {
+    font-size: 6px;
+
+    font-weight: 700;
+
+    margin-top: 5px;
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================================================
+   MODERN PREVIEW
+========================================================= */
+
+.preview-modern {
+    background:
+        linear-gradient(
+            135deg,
+            #edf8f8,
+            #f4f0ff
+        );
+}
+
+
+.modern-resume {
+    display: grid;
+
+    grid-template-columns:
+        32% 68%;
+
+    height: 215px;
+}
+
+
+.modern-sidebar {
+    background:
+        linear-gradient(
+            180deg,
+            #315c72,
+            #493b69
+        );
+
+    padding: 13px 9px;
+
+    color: #ffffff;
+}
+
+
+.modern-avatar {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    opacity: 0.9;
+
+    margin-bottom: 9px;
+}
+
+
+.modern-sidebar .mini-section {
+    color: #ffffff;
+
+    margin-top: 13px;
+}
+
+
+.modern-sidebar .mini-line {
+    background: rgba(255,255,255,0.35);
+}
+
+
+.modern-content {
+    padding: 14px 13px;
+}
+
+
+.modern-name {
+    color: #315c72;
+
+    font-size: 14px;
+}
+
+
+.modern-accent {
+    width: 38px;
+    height: 3px;
+
+    background: #8b5cf6;
+
+    margin: 5px 0 12px;
+}
+
+
+.modern-content .mini-section {
+    color: #493b69;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   EXECUTIVE PREVIEW
+========================================================= */
+
+.preview-executive {
+    background: #e9e7e2;
+}
+
+
+.executive-resume {
+    border-left: 8px solid #171717;
+
+    padding: 14px 15px;
+}
+
+
+.executive-header {
+    border-bottom:
+        1px solid #c4a65a;
+
+    padding-bottom: 9px;
+
+    margin-bottom: 11px;
+}
+
+
+.executive-name {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    color: #171717;
+}
+
+
+.executive-title {
+    font-size: 6px;
+
+    color: #96752e;
+
+    letter-spacing: 1px;
+
+    margin-top: 4px;
+}
+
+
+.executive-gold-line {
+    width: 40px;
+
+    height: 2px;
+
+    background: #b89445;
+
+    margin-top: 5px;
+}
+
+
+.executive-body {
+    display: grid;
+
+    grid-template-columns:
+        1.7fr 1fr;
+
+    gap: 14px;
+}
+
+
+.executive-section {
+    color: #8b6d2d;
+
+    border-bottom:
+        1px solid #d8cfba;
+
+    padding-bottom: 3px;
+
+    margin-bottom: 5px;
+}
+
+
+.executive-job {
+    font-size: 6px;
+
+    font-weight: 700;
+
+    margin-top: 5px;
+}
+
+
+.executive-resume .mini-line {
+    background: #d7d7d7;
+}
+
+
+/* =========================================================
+   FRESHER PREVIEW
+========================================================= */
+
+.preview-fresher {
+    background:
+        linear-gradient(
+            135deg,
+            #edf9f4,
+            #edf5ff
+        );
+}
+
+
+.fresher-resume {
+    display: grid;
+
+    grid-template-rows:
+        58px 1fr;
+}
+
+
+.fresher-header {
+    background:
+        linear-gradient(
+            90deg,
+            #1976d2,
+            #20a779
+        );
+
+    padding: 13px 15px;
+
+    color: #ffffff;
+}
+
+
+.fresher-name {
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.fresher-role {
+    font-size: 6px;
+
+    margin-top: 3px;
+}
+
+
+.fresher-body {
+    padding: 11px 14px;
+}
+
+
+.fresher-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 13px;
+}
+
+
+.fresher-section {
+    color: #1976d2;
+
+    margin-bottom: 5px;
+}
+
+
+.fresher-icon-box {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 2px;
+
+    background: #20a779;
+
+    margin-right: 3px;
+}
+
+
+.fresher-resume .mini-line {
+    background: #d7e5df;
+}
+
+
+/* =========================================================
+   ATS PREVIEW
+========================================================= */
+
+.preview-ats {
+    background: #f1f1f1;
+}
+
+
+.ats-resume {
+    padding: 14px 17px;
+
+    border: 1px solid #d6d6d6;
+
+    box-shadow: none;
+}
+
+
+.ats-header {
+    border-bottom:
+        2px solid #222222;
+
+    padding-bottom: 8px;
+
+    margin-bottom: 9px;
+}
+
+
+.ats-name {
+    font-size: 15px;
+
+    font-weight: 800;
+
+    color: #111111;
+}
+
+
+.ats-contact {
+    font-size: 5px;
+
+    color: #555555;
+
+    margin-top: 4px;
+}
+
+
+.ats-section {
+    font-size: 6.5px;
+
+    font-weight: 800;
+
+    color: #111111;
+
+    border-bottom:
+        1px solid #777777;
+
+    padding-bottom: 3px;
+
+    margin-top: 8px;
+
+    margin-bottom: 4px;
+}
+
+
+.ats-resume .mini-line {
+    height: 2px;
+
+    background: #cfcfcf;
+}
+
+
+/* =========================================================
+   CREATIVE PREVIEW
+========================================================= */
+
+.preview-creative {
+    background:
+        linear-gradient(
+            135deg,
+            #fdf1f7,
+            #eef1ff
+        );
+}
+
+
+.creative-resume {
+    display: grid;
+
+    grid-template-columns:
+        35% 65%;
+}
+
+
+.creative-sidebar {
+    background: #27272a;
+
+    color: #ffffff;
+
+    padding: 14px 10px;
+
+    position: relative;
+}
+
+
+.creative-sidebar::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: #ec4899;
+}
+
+
+.creative-avatar {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ec4899,
+            #8b5cf6
+        );
+
+    margin-bottom: 9px;
+}
+
+
+.creative-sidebar .mini-section {
+    color: #f9a8d4;
+
+    margin-top: 12px;
+}
+
+
+.creative-sidebar .mini-line {
+    background: #52525b;
+}
+
+
+.creative-content {
+    padding: 14px 12px;
+}
+
+
+.creative-name {
+    font-size: 14px;
+
+    font-weight: 800;
+
+    color: #27272a;
+}
+
+
+.creative-role {
+    color: #ec4899;
+
+    font-size: 6px;
+
+    font-weight: 700;
+
+    margin-top: 3px;
+}
+
+
+.creative-shape {
+    width: 45px;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ec4899,
+            #8b5cf6
+        );
+
+    margin: 7px 0 11px;
+
+    border-radius: 5px;
+}
+
+
+.creative-section {
+    color: #8b5cf6;
+
+    margin-top: 9px;
+}
+
+
+.creative-content .mini-line {
+    background: #e4e4e7;
+}
+
+
+/* =========================================================
+   RESUME CARD CONTENT
+========================================================= */
+
+.resume-card-content {
+    padding: 27px 25px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.resume-number {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #41628b;
+
+    margin-bottom: 10px;
+}
+
+
+.resume-card-content h3 {
+    font-size: 24px;
+
+    line-height: 1.2;
+
+    color: #172033;
+
+    margin-bottom: 12px;
+}
+
+
+.resume-card-content p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   RESUME TARGET LABEL
+========================================================= */
+
+.resume-target {
+    display: inline-block;
+
+    align-self: flex-start;
+
+    padding: 5px 9px;
+
+    margin-bottom: 14px;
+
+    border-radius: 20px;
+
+    background: #f1f4f7;
+
+    color: #53657a;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   LAUNCH BADGE
+========================================================= */
+
+.launch-badge {
+    display: inline-block;
+
+    align-self: flex-start;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    border: 1px solid #ead7bc;
+
+    background: #fff8ed;
+
+    color: #a15f20;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.resume-price-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 2px;
+}
+
+
+.old-price {
+    color: #888888;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    text-decoration:
+        line-through;
+}
+
+
+.new-price {
+    color: #172033;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 29px;
+
+    font-weight: 800;
+}
+
+
+.saving-text {
+    color: #31805b;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   RESUME BUTTON
+========================================================= */
+
+.resume-button {
+    width: 100%;
+
+    min-height: 47px;
+
+    margin-top: auto;
+
+    padding: 13px 15px;
+
+    background: #172b45;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    letter-spacing: 0.2px;
+}
+
+
+.resume-button:hover {
+    background: #b07a35;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(176,122,53,0.2);
+}
+
+
+/* =========================================================
+   PROCESS SECTION
+========================================================= */
+
+.process-section {
+    padding: 95px 5%;
+
+    background: #ffffff;
+}
+
+
+.process-grid {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.process-card {
+    padding: 30px 25px;
+
+    border-top:
+        3px solid #172033;
+
+    background: #f8f9fb;
+}
+
+
+.process-number {
+    color: #b07a35;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 16px;
+}
+
+
+.process-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 10px;
+
+    color: #172033;
+}
+
+
+.process-card p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.home-cta {
+    padding: 90px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172033,
+            #263852
+        );
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+
+.home-cta > div {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.home-cta span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #d5a45c;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.home-cta h2 {
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.2;
+
+    margin: 15px 0;
+}
+
+
+.home-cta p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #d7dde5;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.cta-button {
+    padding: 14px 28px;
+
+    background: #d5a45c;
+
+    color: #172033;
+
+    font-size: 13px;
+}
+
+
+.cta-button:hover {
+    background: #e3bb7f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: #101722;
+
+    color: #ffffff;
+
+    padding: 55px 5% 0;
+}
+
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+
+.footer-brand h2 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.footer-brand p {
+    max-width: 350px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #9ca7b7;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.footer-links a {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #c6ced9;
+
+    font-size: 12px;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer-links a:hover {
+    color: #d5a45c;
+}
+
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #7f8998;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .benefits {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .resume-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .process-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    /* HEADER */
+
+    .main-header {
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .logo a {
+        font-size: 25px;
+    }
+
+
+    .main-header nav {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .main-header nav a {
+        font-size: 10px;
+    }
+
+
+    /* HERO */
+
+    .home-hero {
+        min-height: 560px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .primary-button,
+    .secondary-button {
+        width: 85%;
+
+        max-width: 300px;
+    }
+
+
+    /* SECTIONS */
+
+    .why-section,
+    .resume-section,
+    .process-section {
+        padding: 70px 4%;
+    }
+
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+
+    /* BENEFITS */
+
+    .benefits {
+        width: 100%;
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* RESUMES */
+
+    .resume-grid {
+        width: 100%;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 22px;
+    }
+
+
+    .resume-preview {
+        height: 245px;
+    }
+
+
+    .mini-resume {
+        width: 75%;
+
+        height: 215px;
+    }
+
+
+    .resume-card-content {
+        padding: 25px 22px 23px;
+    }
+
+
+    /* PROCESS */
+
+    .process-grid {
+        width: 100%;
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* CTA */
+
+    .home-cta {
+        padding: 70px 6%;
+    }
+
+
+    .home-cta h2 {
+        font-size: 32px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .footer-links {
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .main-header nav {
+        gap: 9px;
+    }
+
+
+    .main-header nav a {
+        font-size: 9px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+
+    .resume-preview {
+        height: 225px;
+    }
+
+
+    .mini-resume {
+        width: 78%;
+
+        height: 200px;
+    }
+
+
+    .new-price {
+        font-size: 27px;
+    }
+
+}
